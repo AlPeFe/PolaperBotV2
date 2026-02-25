@@ -1,9 +1,18 @@
 using PolaperBot.Api.Endpoints;
 using PolaperBot.Core.AI;
 using PolaperBot.Core.AI.Configuration;
+using PolaperBot.Core.AI.Extensions;
 using PolaperBot.Infra;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
+
+Log.Logger = new LoggerConfiguration()
+    .ReadFrom.Configuration(builder.Configuration)
+    .Enrich.FromLogContext()
+    .CreateLogger();
+
+builder.Host.UseSerilog();
 
 builder.Services.AddOpenApi();
 
@@ -38,6 +47,7 @@ builder.Services.AddCoreAiAgent(
     });
 
 builder.Services.AddSqliteSessionStore(dbPath);
+builder.Services.AddHeartbeatService();
 
 var app = builder.Build();
 
@@ -48,4 +58,16 @@ if (app.Environment.IsDevelopment())
 
 app.MapChatEndpoints();
 
-app.Run();
+try
+{
+    Log.Information("Starting PolaperBot API");
+    app.Run();
+}
+catch (Exception ex)
+{
+    Log.Fatal(ex, "Application terminated unexpectedly");
+}
+finally
+{
+    Log.CloseAndFlush();
+}

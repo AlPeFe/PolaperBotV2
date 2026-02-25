@@ -17,3 +17,6 @@ Juan
 
 ## [2026-02-25 10:53]
 User is Juan, watching Ozark
+
+## [2026-02-25 16:26]
+User asked to check events, not yet authorized

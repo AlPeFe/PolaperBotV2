@@ -79,3 +79,13 @@
 /home/polaper/Projects/PolaperBotV2/PolaperBot.Api/bin/Debug/net10.0/System.Management.dll
 /home/polaper/Projects/PolaperBotV2/PolaperBot.Api/bin/Debug/net10.0/runtimes/win/lib/net7.0/System.Management.dll
 /home/polaper/Projects/PolaperBotV2/PolaperBot.Api/obj/Debug/net10.0/PolaperBot.Api.sourcelink.json
+/home/polaper/Projects/PolaperBotV2/PolaperBot.Api/bin/Debug/net10.0/Microsoft.Extensions.DependencyModel.dll
+/home/polaper/Projects/PolaperBotV2/PolaperBot.Api/bin/Debug/net10.0/Serilog.dll
+/home/polaper/Projects/PolaperBotV2/PolaperBot.Api/bin/Debug/net10.0/Serilog.AspNetCore.dll
+/home/polaper/Projects/PolaperBotV2/PolaperBot.Api/bin/Debug/net10.0/Serilog.Extensions.Hosting.dll
+/home/polaper/Projects/PolaperBotV2/PolaperBot.Api/bin/Debug/net10.0/Serilog.Extensions.Logging.dll
+/home/polaper/Projects/PolaperBotV2/PolaperBot.Api/bin/Debug/net10.0/Serilog.Formatting.Compact.dll
+/home/polaper/Projects/PolaperBotV2/PolaperBot.Api/bin/Debug/net10.0/Serilog.Settings.Configuration.dll
+/home/polaper/Projects/PolaperBotV2/PolaperBot.Api/bin/Debug/net10.0/Serilog.Sinks.Console.dll
+/home/polaper/Projects/PolaperBotV2/PolaperBot.Api/bin/Debug/net10.0/Serilog.Sinks.Debug.dll
+/home/polaper/Projects/PolaperBotV2/PolaperBot.Api/bin/Debug/net10.0/Serilog.Sinks.File.dll

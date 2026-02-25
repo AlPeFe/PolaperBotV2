@@ -119,6 +119,7 @@ PolaperBotV2/
 | 13 | Add FileSystemTool for file operations | ✅ |
 | 14 | Refactor tools to use proper DI | ✅ |
 | 15 | Add Usage tracking for observability | ✅ |
+| 16 | Add HeartbeatService with configurable triggers | ✅ |
 
 ## Key Design Decisions
 
@@ -130,6 +131,27 @@ PolaperBotV2/
 6. **Factory Pattern**: `GoogleServicesFactory` handles OAuth and service creation
 7. **Full System Access**: BashTool and FileSystemTool with complete permissions
 8. **Usage Tracking**: Processing time stored for observability (not retrieved on load)
+9. **Heartbeat Service**: Background service with configurable triggers (GmailHbs, RemindersHbs)
+
+## Heartbeat Service
+
+Configurable background service that executes triggers at specified intervals:
+
+```json
+{
+  "Heartbeat": {
+    "Enabled": true,
+    "IntervalMinutes": 5,
+    "EnabledTriggers": ["GmailHbs", "RemindersHbs"]
+  }
+}
+```
+
+Available triggers:
+- `GmailHbs` - Gmail heartbeat trigger (placeholder)
+- `RemindersHbs` - Reminders heartbeat trigger (placeholder)
+
+To add new triggers, implement `IHeartbeatTrigger` interface and register in DI.
 
 ## API Endpoints
 
