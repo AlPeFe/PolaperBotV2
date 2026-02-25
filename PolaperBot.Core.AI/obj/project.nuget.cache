@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "dgSpecHash": "nF5n+qJLGOo=",
+  "success": true,
+  "projectFilePath": "/home/polaper/Projects/PolaperBotV2/PolaperBot.Core.AI/PolaperBot.Core.AI.csproj",
+  "expectedPackageFiles": [
+    "/home/polaper/.nuget/packages/microsoft.agents.ai/1.0.0-rc1/microsoft.agents.ai.1.0.0-rc1.nupkg.sha512",
+    "/home/polaper/.nuget/packages/microsoft.agents.ai.abstractions/1.0.0-rc1/microsoft.agents.ai.abstractions.1.0.0-rc1.nupkg.sha512",
+    "/home/polaper/.nuget/packages/microsoft.extensions.ai/10.3.0/microsoft.extensions.ai.10.3.0.nupkg.sha512",
+    "/home/polaper/.nuget/packages/microsoft.extensions.ai.abstractions/10.3.0/microsoft.extensions.ai.abstractions.10.3.0.nupkg.sha512",
+    "/home/polaper/.nuget/packages/microsoft.extensions.caching.abstractions/10.0.3/microsoft.extensions.caching.abstractions.10.0.3.nupkg.sha512",
+    "/home/polaper/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/10.0.3/microsoft.extensions.dependencyinjection.abstractions.10.0.3.nupkg.sha512",
+    "/home/polaper/.nuget/packages/microsoft.extensions.logging.abstractions/10.0.3/microsoft.extensions.logging.abstractions.10.0.3.nupkg.sha512",
+    "/home/polaper/.nuget/packages/microsoft.extensions.primitives/10.0.3/microsoft.extensions.primitives.10.0.3.nupkg.sha512",
+    "/home/polaper/.nuget/packages/microsoft.extensions.vectordata.abstractions/9.7.0/microsoft.extensions.vectordata.abstractions.9.7.0.nupkg.sha512",
+    "/home/polaper/.nuget/packages/ollamasharp/5.4.16/ollamasharp.5.4.16.nupkg.sha512",
+    "/home/polaper/.nuget/packages/system.numerics.tensors/10.0.3/system.numerics.tensors.10.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

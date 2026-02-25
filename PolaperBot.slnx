@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="PolaperBot.Api/PolaperBot.Api.csproj" />
+  <Project Path="PolaperBot.Core.AI/PolaperBot.Core.AI.csproj" />
+  <Project Path="PolaperBot.Infra/PolaperBot.Infra.csproj" />
+</Solution>
