@@ -9,6 +9,8 @@ Recreation of PolaperBot.Core.AI using the latest Microsoft Agent Framework tool
 - SQLite (Session persistence)
 - Microsoft.Agent.Framework 1.0.0-rc1
 - OllamaSharp 5.4.16
+- Google.Apis.Gmail.v1
+- Google.Apis.Calendar.v3
 - Ollama (gpt-oss:20b-cloud)
 
 ## Project Structure
@@ -17,24 +19,28 @@ PolaperBotV2/
 ├── PolaperBot.Core.AI/           # Core AI Library (.NET 10)
 │   ├── Configuration/
 │   │   ├── AgentInstructions.cs  # Agent system prompts
-│   │   └── AgentOptions.cs       # Configuration POCOs
+│   │   └── AgentOptions.cs       # Configuration POCOs (Ollama, Google, Database)
 │   ├── Extensions/
 │   │   ├── ServiceCollectionExtensions.cs  # Main DI entry point
 │   │   ├── AgentBuilderExtensions.cs       # Agent-specific DI
 │   │   ├── ToolsExtensions.cs              # Tools DI
 │   │   └── InstructionsExtensions.cs       # Instructions DI
-│   ├── Tools/
-│   │   └── MemoryTool.cs        # MEMORY.MD tool implementation
+│   ├── Services/
+│   │   ├── AgentService.cs       # Agent orchestration
+│   │   └── GoogleServicesFactory.cs  # Google OAuth factory
 │   ├── Sessions/
-│   │   └── ISessionStore.cs     # Session store interface
-│   └── Services/
-│       └── AgentService.cs      # Agent orchestration service
+│   │   └── ISessionStore.cs      # Session store interface
+│   └── Tools/
+│       ├── MemoryTool.cs         # MEMORY.MD tool
+│       ├── GmailTool.cs          # Gmail integration
+│       └── GoogleCalendarTool.cs # Calendar integration
 ├── PolaperBot.Infra/            # Infrastructure Layer (.NET 10)
 │   ├── Extensions/
 │   │   └── InfraExtensions.cs   # DI extensions
 │   └── Sessions/
 │       └── SqliteSessionStore.cs # SQLite session persistence
 ├── PolaperBot.Api/              # Minimal API (.NET 10)
+│   ├── credentials/             # Google credentials folder
 │   ├── Program.cs
 │   ├── appsettings.json
 │   └── Endpoints/
@@ -49,11 +55,30 @@ PolaperBotV2/
 |---------|---------|---------|
 | Core.AI | `Microsoft.Agents.AI` | `1.0.0-rc1` |
 | Core.AI | `Microsoft.Extensions.AI` | `10.3.0` |
+| Core.AI | `Microsoft.Extensions.Configuration.Abstractions` | `10.0.3` |
 | Core.AI | `Microsoft.Extensions.DependencyInjection.Abstractions` | `10.0.3` |
 | Core.AI | `OllamaSharp` | `5.4.16` |
+| Core.AI | `Google.Apis.Calendar.v3` | `1.69.0.3667` |
+| Core.AI | `Google.Apis.Gmail.v1` | `1.69.0.3742` |
 | Infra | `Microsoft.Agents.AI` | `1.0.0-rc1` |
 | Infra | `Microsoft.Data.Sqlite` | `10.0.2` |
 | Api | `Microsoft.AspNetCore.OpenApi` | `10.0.2` |
+
+## AI Tools Available
+
+### MemoryTool
+- `SaveToMemory(data)` - Save important data to MEMORY.MD
+- `ReadMemory()` - Read stored memory
+
+### GmailTool
+- `SendEmail(destinatario, asunto, contenido)` - Send email
+- `SummarizeEmailsByDate(fecha)` - Get email summary by date
+
+### GoogleCalendarTool
+- `CreateEvent(titulo, descripcion, fechaInicio, fechaFin, ubicacion)` - Create event
+- `GetUpcomingEvents(maxResultados)` - List upcoming events
+- `GetEventsByDate(fecha)` - Get events by date
+- `DeleteEvent(eventoId)` - Delete event
 
 ## Implementation Tasks
 
@@ -67,6 +92,9 @@ PolaperBotV2/
 | 6 | Create API endpoints | ✅ |
 | 7 | Add SQLite session persistence | ✅ |
 | 8 | Implement ChatReduction with `MessageCountingChatReducer(20)` | ✅ |
+| 9 | Add Gmail integration | ✅ |
+| 10 | Add Google Calendar integration | ✅ |
+| 11 | Create GoogleServicesFactory with OAuth | ✅ |
 
 ## Key Design Decisions
 
@@ -74,6 +102,8 @@ PolaperBotV2/
 2. **SQLite Session Persistence**: Sessions serialized to JSON and stored in SQLite
 3. **Chat Reduction**: `InMemoryChatHistoryProvider` with 20-message limit
 4. **DI Separation**: Each layer has its own extension methods
+5. **Graceful Degradation**: Tools disabled when Google credentials missing
+6. **Factory Pattern**: `GoogleServicesFactory` handles OAuth and service creation
 
 ## API Endpoints
 
@@ -100,7 +130,16 @@ PolaperBotV2/
 ```json
 {
   "Database": { "SqlitePath": "sessions.db" },
-  "Ollama": { "Endpoint": "http://localhost:11434", "Model": "gpt-oss:20b-cloud" },
+  "Ollama": { 
+    "Endpoint": "http://localhost:11434", 
+    "Model": "gpt-oss:20b-cloud" 
+  },
+  "Google": {
+    "CredentialsPath": "./credentials/google_credentials.json",
+    "TokenFolder": "./credentials/google_token",
+    "EnableGmail": true,
+    "EnableCalendar": true
+  },
   "Agent": { "Name": "HanniAssistant", "MemoryPath": "./MEMORY.MD" }
 }
 ```
@@ -118,6 +157,14 @@ CREATE TABLE Sessions (
 
 - `LoadOrCreateAsync(userId)`: Loads session from DB or creates new
 - `SaveAsync(userId, session)`: Serializes and saves session after each message
+
+## Google Integration Setup
+
+1. Create Google Cloud project
+2. Enable Gmail API and Calendar API
+3. Create OAuth 2.0 credentials (Desktop app)
+4. Download JSON to `credentials/google_credentials.json`
+5. First run triggers OAuth authorization flow
 
 ---
 *Last updated: 2026-02-25*

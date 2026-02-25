@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PolaperBot.Infra")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3fe42db0ee603ea070910e693ac19c6f4e16ff29")]
 [assembly: System.Reflection.AssemblyProductAttribute("PolaperBot.Infra")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PolaperBot.Infra")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

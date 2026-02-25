@@ -17,3 +17,11 @@ public class DatabaseOptions
 {
     public string SqlitePath { get; set; } = "Data Source=polaperbot.db";
 }
+
+public class GoogleOptions
+{
+    public string CredentialsPath { get; set; } = "./credentials/google_credentials.json";
+    public string TokenFolder { get; set; } = "./credentials/google_token";
+    public bool EnableGmail { get; set; } = true;
+    public bool EnableCalendar { get; set; } = true;
+}

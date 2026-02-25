@@ -69,3 +69,13 @@
 /home/polaper/Projects/PolaperBotV2/PolaperBot.Api/obj/Debug/net10.0/ref/PolaperBot.Api.dll
 /home/polaper/Projects/PolaperBotV2/PolaperBot.Api/bin/Debug/net10.0/PolaperBot.Infra.dll
 /home/polaper/Projects/PolaperBotV2/PolaperBot.Api/bin/Debug/net10.0/PolaperBot.Infra.pdb
+/home/polaper/Projects/PolaperBotV2/PolaperBot.Api/bin/Debug/net10.0/Google.Apis.dll
+/home/polaper/Projects/PolaperBotV2/PolaperBot.Api/bin/Debug/net10.0/Google.Apis.Auth.dll
+/home/polaper/Projects/PolaperBotV2/PolaperBot.Api/bin/Debug/net10.0/Google.Apis.Calendar.v3.dll
+/home/polaper/Projects/PolaperBotV2/PolaperBot.Api/bin/Debug/net10.0/Google.Apis.Core.dll
+/home/polaper/Projects/PolaperBotV2/PolaperBot.Api/bin/Debug/net10.0/Google.Apis.Gmail.v1.dll
+/home/polaper/Projects/PolaperBotV2/PolaperBot.Api/bin/Debug/net10.0/Newtonsoft.Json.dll
+/home/polaper/Projects/PolaperBotV2/PolaperBot.Api/bin/Debug/net10.0/System.CodeDom.dll
+/home/polaper/Projects/PolaperBotV2/PolaperBot.Api/bin/Debug/net10.0/System.Management.dll
+/home/polaper/Projects/PolaperBotV2/PolaperBot.Api/bin/Debug/net10.0/runtimes/win/lib/net7.0/System.Management.dll
+/home/polaper/Projects/PolaperBotV2/PolaperBot.Api/obj/Debug/net10.0/PolaperBot.Api.sourcelink.json

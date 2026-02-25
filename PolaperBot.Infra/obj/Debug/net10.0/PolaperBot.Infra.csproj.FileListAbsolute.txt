@@ -13,3 +13,4 @@
 /home/polaper/Projects/PolaperBotV2/PolaperBot.Infra/obj/Debug/net10.0/refint/PolaperBot.Infra.dll
 /home/polaper/Projects/PolaperBotV2/PolaperBot.Infra/obj/Debug/net10.0/PolaperBot.Infra.pdb
 /home/polaper/Projects/PolaperBotV2/PolaperBot.Infra/obj/Debug/net10.0/ref/PolaperBot.Infra.dll
+/home/polaper/Projects/PolaperBotV2/PolaperBot.Infra/obj/Debug/net10.0/PolaperBot.Infra.sourcelink.json

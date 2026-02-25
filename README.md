@@ -20,7 +20,8 @@ PolaperBot V2 is a conversational AI assistant built with clean architecture pri
 │            (Domain Layer - Abstractions & Logic)            │
 │                                                             │
 │  • ISessionStore      • IAgentService                       │
-│  • MemoryTool         • AgentInstructions                   │
+│  • MemoryTool         • GmailTool                           │
+│  • GoogleCalendarTool • AgentInstructions                   │
 └─────────────────────────────────────────────────────────────┘
                               │
                               ▼
@@ -43,13 +44,26 @@ PolaperBot V2 is a conversational AI assistant built with clean architecture pri
 | **API Style** | Minimal API |
 | **Architecture** | Clean Architecture / Onion Architecture |
 | **DI Pattern** | Extension Methods per Layer |
+| **Integrations** | Gmail API, Google Calendar API |
 
 ## Key Features
 
 ### 🧠 AI Agent with Tools
-- Custom tool implementation (`MemoryTool`) for persistent memory
+- **MemoryTool** - Persistent memory storage in MEMORY.MD
+- **GmailTool** - Send emails, summarize emails by date
+- **GoogleCalendarTool** - Create, update, delete, and list calendar events
 - Extensible tool system via `AITool[]` registration
 - Natural language processing in Spanish
+
+### 📧 Gmail Integration
+- `SendEmail` - Send emails through Gmail
+- `SummarizeEmailsByDate` - Get email summaries for a specific date
+
+### 📅 Google Calendar Integration
+- `CreateEvent` - Create new calendar events
+- `GetUpcomingEvents` - List upcoming events
+- `GetEventsByDate` - Get events for a specific date
+- `DeleteEvent` - Delete calendar events by ID
 
 ### 💾 Session Persistence
 - SQLite-backed session storage
@@ -65,11 +79,19 @@ PolaperBot V2 is a conversational AI assistant built with clean architecture pri
 ### 🔌 Clean DI Setup
 ```csharp
 // Program.cs - Clean and declarative
-builder.Services.AddCoreAiAgent(options =>
-{
-    options.Endpoint = "http://localhost:11434";
-    options.Model = "gpt-oss:20b-cloud";
-});
+builder.Services.AddCoreAiAgent(
+    ollama => 
+    {
+        ollama.Endpoint = "http://localhost:11434";
+        ollama.Model = "gpt-oss:20b-cloud";
+    },
+    google => 
+    {
+        google.CredentialsPath = "./credentials/google_credentials.json";
+        google.TokenFolder = "./credentials/google_token";
+        google.EnableGmail = true;
+        google.EnableCalendar = true;
+    });
 
 builder.Services.AddSqliteSessionStore("sessions.db");
 ```
@@ -109,11 +131,14 @@ PolaperBotV2/
 │   │   ├── InstructionsExtensions.cs   # Instructions DI
 │   │   └── ToolsExtensions.cs          # Tools DI
 │   ├── Services/
-│   │   └── AgentService.cs             # Agent orchestration
+│   │   ├── AgentService.cs             # Agent orchestration
+│   │   └── GoogleServicesFactory.cs    # Google OAuth factory
 │   ├── Sessions/
 │   │   └── ISessionStore.cs            # Session abstraction
 │   └── Tools/
-│       └── MemoryTool.cs               # Memory persistence tool
+│       ├── MemoryTool.cs               # Memory persistence tool
+│       ├── GmailTool.cs                # Gmail integration
+│       └── GoogleCalendarTool.cs       # Calendar integration
 │
 ├── PolaperBot.Infra/                   # Infrastructure layer
 │   ├── Extensions/
@@ -122,6 +147,7 @@ PolaperBotV2/
 │       └── SqliteSessionStore.cs       # SQLite implementation
 │
 ├── PolaperBot.Api/                     # API layer
+│   ├── credentials/                    # Google credentials folder
 │   ├── Endpoints/
 │   │   └── ChatEndpoints.cs            # Endpoint definitions
 │   ├── Program.cs                      # App entry point
@@ -137,14 +163,16 @@ PolaperBotV2/
 | **Dependency Injection** | All services registered via DI containers |
 | **Repository Pattern** | `ISessionStore` abstracts data access |
 | **Extension Methods** | Clean service registration per layer |
-| **Options Pattern** | `OllamaOptions`, `AgentOptions` |
-| **Factory Pattern** | Tool building via `BuildAgentTools()` |
+| **Options Pattern** | `OllamaOptions`, `GoogleOptions`, `AgentOptions` |
+| **Factory Pattern** | `GoogleServicesFactory` for OAuth, `BuildAgentTools()` for tools |
+| **Graceful Degradation** | Tools disabled when credentials missing |
 
 ## Getting Started
 
 ### Prerequisites
 - .NET 10 SDK
 - Ollama running locally with a model
+- (Optional) Google Cloud credentials for Gmail/Calendar
 
 ### Run
 ```bash
@@ -155,6 +183,15 @@ cd PolaperBotV2
 dotnet run --project PolaperBot.Api
 ```
 
+### Google Integration Setup (Optional)
+
+1. Go to [Google Cloud Console](https://console.cloud.google.com/)
+2. Create a project and enable Gmail API and Calendar API
+3. Create OAuth 2.0 credentials (Desktop app)
+4. Download credentials JSON
+5. Save to `PolaperBot.Api/credentials/google_credentials.json`
+6. First run will open browser for OAuth authorization
+
 ### Configuration (appsettings.json)
 ```json
 {
@@ -164,6 +201,12 @@ dotnet run --project PolaperBot.Api
   "Ollama": {
     "Endpoint": "http://localhost:11434",
     "Model": "gpt-oss:20b-cloud"
+  },
+  "Google": {
+    "CredentialsPath": "./credentials/google_credentials.json",
+    "TokenFolder": "./credentials/google_token",
+    "EnableGmail": true,
+    "EnableCalendar": true
   }
 }
 ```
@@ -173,11 +216,14 @@ dotnet run --project PolaperBot.Api
 - ✅ **Clean Architecture** - Separation of concerns across layers
 - ✅ **Modern .NET** - .NET 10 with Minimal APIs
 - ✅ **AI Integration** - Microsoft Agent Framework & Ollama
+- ✅ **External APIs** - Gmail API & Google Calendar API integration
+- ✅ **OAuth 2.0** - Google authentication flow
 - ✅ **Persistence** - SQLite with async operations
 - ✅ **DI Best Practices** - Extension methods for clean registration
 - ✅ **Async/Await** - Non-blocking I/O throughout
 - ✅ **JSON Serialization** - Session state persistence
-- ✅ **Error Handling** - Graceful fallbacks for session deserialization
+- ✅ **Error Handling** - Graceful fallbacks for missing credentials
+- ✅ **Tool System** - Extensible AI function calling
 
 ## License
 
