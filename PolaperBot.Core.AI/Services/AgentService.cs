@@ -1,3 +1,5 @@
+using System.Diagnostics;
+using System.Reflection;
 using Microsoft.Agents.AI;
 using PolaperBot.Core.AI.Sessions;
 
@@ -23,10 +25,31 @@ public class AgentService : IAgentService
     {
         var session = await _sessionStore.LoadOrCreateAsync(userId, cancellationToken);
 
+        var stopwatch = Stopwatch.StartNew();
         var response = await _agent.RunAsync(message, session, cancellationToken: cancellationToken);
+        stopwatch.Stop();
 
-        await _sessionStore.SaveAsync(userId, session, cancellationToken);
+        var usage = ExtractUsage(response, stopwatch.ElapsedMilliseconds);
+        await _sessionStore.SaveAsync(userId, session, usage, cancellationToken);
 
         return response?.ToString() ?? "No pude procesar tu mensaje.";
+    }
+
+    private static SessionUsage ExtractUsage(AgentResponse? response, long processingTimeMs)
+    {
+        if (response == null)
+            return new SessionUsage { ProcessingTimeMs = processingTimeMs, Timestamp = DateTime.UtcNow };
+
+        var usageDetails = response.Usage;
+
+        var usage = new SessionUsage
+        {
+            ProcessingTimeMs = processingTimeMs,
+            Timestamp = DateTime.UtcNow,
+            OutputTokens = Convert.ToInt32(usageDetails.OutputTokenCount),
+            InputTokens = Convert.ToInt32(usageDetails.InputTokenCount)
+        };
+
+        return usage;
     }
 }

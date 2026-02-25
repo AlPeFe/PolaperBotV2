@@ -24,16 +24,34 @@ public class SqliteSessionStore : ISessionStore
     {
         using var conn = new SqliteConnection(_connectionString);
         conn.Open();
+        
         using var cmd = conn.CreateCommand();
         cmd.CommandText = """
             CREATE TABLE IF NOT EXISTS Sessions (
                 UserId INTEGER PRIMARY KEY,
                 SessionJson TEXT NOT NULL,
+                UsageJson TEXT,
                 UpdatedAt TEXT NOT NULL
             )
             """;
         cmd.ExecuteNonQuery();
+        
+        AddUsageColumnIfNotExists(conn);
+        
         _logger.LogInformation("Sessions table initialized");
+    }
+
+    private static void AddUsageColumnIfNotExists(SqliteConnection conn)
+    {
+        try
+        {
+            using var cmd = conn.CreateCommand();
+            cmd.CommandText = "ALTER TABLE Sessions ADD COLUMN UsageJson TEXT";
+            cmd.ExecuteNonQuery();
+        }
+        catch (SqliteException)
+        {
+        }
     }
 
     public async Task<AgentSession> LoadOrCreateAsync(long userId, CancellationToken cancellationToken = default)
@@ -68,24 +86,44 @@ public class SqliteSessionStore : ISessionStore
         }
     }
 
-    public async Task SaveAsync(long userId, AgentSession session, CancellationToken cancellationToken = default)
+    public async Task SaveAsync(long userId, AgentSession session, SessionUsage? usage = null, CancellationToken cancellationToken = default)
     {
         var serialized = await _agent.SerializeSessionAsync(session);
-        var json = JsonSerializer.Serialize(serialized);
+        var sessionJson = JsonSerializer.Serialize(serialized);
+        var usageJson = usage != null ? JsonSerializer.Serialize(usage) : null;
 
         using var conn = new SqliteConnection(_connectionString);
         await conn.OpenAsync(cancellationToken);
 
         using var cmd = conn.CreateCommand();
         cmd.CommandText = """
-            INSERT OR REPLACE INTO Sessions (UserId, SessionJson, UpdatedAt)
-            VALUES ($userId, $json, $updatedAt)
+            INSERT OR REPLACE INTO Sessions (UserId, SessionJson, UsageJson, UpdatedAt)
+            VALUES ($userId, $sessionJson, $usageJson, $updatedAt)
             """;
         cmd.Parameters.AddWithValue("$userId", userId);
-        cmd.Parameters.AddWithValue("$json", json);
+        cmd.Parameters.AddWithValue("$sessionJson", sessionJson);
+        cmd.Parameters.AddWithValue("$usageJson", usageJson ?? (object)DBNull.Value);
         cmd.Parameters.AddWithValue("$updatedAt", DateTimeOffset.UtcNow.ToString("O"));
         await cmd.ExecuteNonQueryAsync(cancellationToken);
-        
-        _logger.LogDebug("Saved session for user {UserId}", userId);
+
+        if (usage != null)
+        {
+            if (usage.InputTokens > 0 || usage.OutputTokens > 0)
+            {
+                _logger.LogInformation(
+                    "Saved session for user {UserId} - Tokens: {Input}+{Output}={Total}, Time: {Time}ms",
+                    userId, usage.InputTokens, usage.OutputTokens, usage.TotalTokens, usage.ProcessingTimeMs);
+            }
+            else
+            {
+                _logger.LogInformation(
+                    "Saved session for user {UserId} - Time: {Time}ms",
+                    userId, usage.ProcessingTimeMs);
+            }
+        }
+        else
+        {
+            _logger.LogDebug("Saved session for user {UserId}", userId);
+        }
     }
 }

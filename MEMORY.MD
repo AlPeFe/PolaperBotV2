@@ -118,6 +118,7 @@ PolaperBotV2/
 | 12 | Add BashTool for shell commands | ✅ |
 | 13 | Add FileSystemTool for file operations | ✅ |
 | 14 | Refactor tools to use proper DI | ✅ |
+| 15 | Add Usage tracking for observability | ✅ |
 
 ## Key Design Decisions
 
@@ -128,6 +129,7 @@ PolaperBotV2/
 5. **Graceful Degradation**: Tools disabled when Google credentials missing
 6. **Factory Pattern**: `GoogleServicesFactory` handles OAuth and service creation
 7. **Full System Access**: BashTool and FileSystemTool with complete permissions
+8. **Usage Tracking**: Processing time stored for observability (not retrieved on load)
 
 ## API Endpoints
 
@@ -175,12 +177,30 @@ Sessions are stored in SQLite with this schema:
 CREATE TABLE Sessions (
     UserId INTEGER PRIMARY KEY,
     SessionJson TEXT NOT NULL,
+    UsageJson TEXT,
     UpdatedAt TEXT NOT NULL
 )
 ```
 
 - `LoadOrCreateAsync(userId)`: Loads session from DB or creates new
-- `SaveAsync(userId, session)`: Serializes and saves session after each message
+- `SaveAsync(userId, session, usage)`: Serializes and saves session with usage metrics
+
+## Session Usage Tracking
+
+Usage is stored for observability/metrics (not retrieved when loading sessions):
+```csharp
+public class SessionUsage
+{
+    public int InputTokens { get; set; }
+    public int OutputTokens { get; set; }
+    public string? Model { get; set; }
+    public double ProcessingTimeMs { get; set; }
+    public int ToolCalls { get; set; }
+    public DateTime Timestamp { get; set; }
+}
+```
+
+Usage is captured automatically after each message and stored in `UsageJson` column.
 
 ## Google Integration Setup
 
