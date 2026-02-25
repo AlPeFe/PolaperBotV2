@@ -27,7 +27,35 @@ public class GoogleCalendarTool : ICalendarTool
             _logger.LogWarning("CalendarService not available - Calendar tools disabled");
     }
 
-    [Description("Crea un nuevo evento en Google Calendar con título, fecha y hora de inicio y fin")]
+    [Description("Obtiene la fecha y hora actual. USA ESTA FUNCIÓN SIEMPRE antes de crear eventos para saber qué día es hoy y calcular fechas relativas como 'mañana', 'dentro de 3 días', etc.")]
+    public Task<string> GetCurrentDateTime()
+    {
+        var now = DateTime.Now;
+        var result = new
+        {
+            fechaActual = now.ToString("yyyy-MM-dd"),
+            horaActual = now.ToString("HH:mm:ss"),
+            diaSemana = now.DayOfWeek switch
+            {
+                DayOfWeek.Monday => "lunes",
+                DayOfWeek.Tuesday => "martes",
+                DayOfWeek.Wednesday => "miércoles",
+                DayOfWeek.Thursday => "jueves",
+                DayOfWeek.Friday => "viernes",
+                DayOfWeek.Saturday => "sábado",
+                DayOfWeek.Sunday => "domingo",
+                _ => "desconocido"
+            },
+            mes = now.ToString("MMMM"),
+            año = now.Year,
+            zonaHoraria = "Europe/Madrid",
+            contexto = $"Hoy es {now:dddd dd 'de' MMMM 'de' yyyy}, son las {now:HH:mm}. Fecha ISO: {now:yyyy-MM-dd}"
+        };
+
+        return Task.FromResult(JsonSerializer.Serialize(result));
+    }
+
+    [Description("Crea un nuevo evento en Google Calendar con título, fecha y hora de inicio y fin. PRIMERO usa GetCurrentDateTime para saber qué día es hoy.")]
     public async Task<string> CreateEvent(
         [Description("Título o resumen del evento")] string titulo = "",
         [Description("Descripción detallada del evento (opcional)")] string descripcion = "",
@@ -150,7 +178,7 @@ public class GoogleCalendarTool : ICalendarTool
         }
     }
 
-    [Description("Obtiene todos los eventos de una fecha específica en formato yyyy-MM-dd")]
+    [Description("Obtiene todos los eventos de una fecha específica en formato yyyy-MM-dd. USA GetCurrentDateTime PRIMERO para saber la fecha actual.")]
     public async Task<string> GetEventsByDate(
         [Description("Fecha en formato yyyy-MM-dd (ejemplo: 2026-02-15)")] string fecha = "")
     {
@@ -232,6 +260,8 @@ public class GoogleCalendarTool : ICalendarTool
 
     public IEnumerable<AITool> AsAITools()
     {
+        yield return AIFunctionFactory.Create(GetCurrentDateTime);
+
         if (_calendarService == null)
             yield break;
 
