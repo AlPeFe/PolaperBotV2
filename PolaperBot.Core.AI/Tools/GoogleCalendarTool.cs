@@ -4,7 +4,6 @@ using Google.Apis.Calendar.v3;
 using Google.Apis.Calendar.v3.Data;
 using Microsoft.Extensions.AI;
 using Microsoft.Extensions.Logging;
-using PolaperBot.Core.AI.Services;
 
 namespace PolaperBot.Core.AI.Tools;
 
@@ -18,10 +17,10 @@ public class GoogleCalendarTool : ICalendarTool
     private readonly CalendarService? _calendarService;
     private readonly ILogger<GoogleCalendarTool> _logger;
 
-    public GoogleCalendarTool(IGoogleServicesFactory factory, ILogger<GoogleCalendarTool> logger)
+    public GoogleCalendarTool(CalendarService? calendarService, ILogger<GoogleCalendarTool> logger)
     {
+        _calendarService = calendarService;
         _logger = logger;
-        _calendarService = factory.CreateCalendarServiceAsync().GetAwaiter().GetResult();
 
         if (_calendarService == null)
             _logger.LogWarning("CalendarService not available - Calendar tools disabled");

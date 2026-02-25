@@ -21,7 +21,8 @@ PolaperBot V2 is a conversational AI assistant built with clean architecture pri
 │                                                             │
 │  • ISessionStore      • IAgentService                       │
 │  • MemoryTool         • GmailTool                           │
-│  • GoogleCalendarTool • AgentInstructions                   │
+│  • GoogleCalendarTool • BashTool                            │
+│  • FileSystemTool     • AgentInstructions                   │
 └─────────────────────────────────────────────────────────────┘
                               │
                               ▼
@@ -44,7 +45,7 @@ PolaperBot V2 is a conversational AI assistant built with clean architecture pri
 | **API Style** | Minimal API |
 | **Architecture** | Clean Architecture / Onion Architecture |
 | **DI Pattern** | Extension Methods per Layer |
-| **Integrations** | Gmail API, Google Calendar API |
+| **Integrations** | Gmail API, Google Calendar API, Shell, FileSystem |
 
 ## Key Features
 
@@ -52,14 +53,33 @@ PolaperBot V2 is a conversational AI assistant built with clean architecture pri
 - **MemoryTool** - Persistent memory storage in MEMORY.MD
 - **GmailTool** - Send emails, summarize emails by date
 - **GoogleCalendarTool** - Create, update, delete, and list calendar events
+- **BashTool** - Execute shell commands with full system access
+- **FileSystemTool** - Full file system operations (read, write, delete, etc.)
 - Extensible tool system via `AITool[]` registration
 - Natural language processing in Spanish
+
+### 💻 Shell Access (BashTool)
+- `ExecuteCommand` - Execute any shell/bash command
+- `GetSystemInfo` - Get OS, user, hostname, drives info
+- Full system permissions (Linux/Mac bash, Windows PowerShell)
+
+### 📁 File System (FileSystemTool)
+- `ReadFile` - Read file contents
+- `WriteFile` - Create/overwrite files
+- `AppendToFile` - Append content to files
+- `ListDirectory` - List files and directories
+- `CreateDirectory` - Create new directories
+- `DeleteFile` / `DeleteDirectory` - Remove files/folders
+- `CopyFile` / `Move` - Copy or move files
+- `Exists` - Check if file/directory exists
+- `SearchFiles` - Search files by pattern
 
 ### 📧 Gmail Integration
 - `SendEmail` - Send emails through Gmail
 - `SummarizeEmailsByDate` - Get email summaries for a specific date
 
 ### 📅 Google Calendar Integration
+- `GetCurrentDateTime` - Get current date/time context
 - `CreateEvent` - Create new calendar events
 - `GetUpcomingEvents` - List upcoming events
 - `GetEventsByDate` - Get events for a specific date
@@ -136,9 +156,11 @@ PolaperBotV2/
 │   ├── Sessions/
 │   │   └── ISessionStore.cs            # Session abstraction
 │   └── Tools/
-│       ├── MemoryTool.cs               # Memory persistence tool
+│       ├── MemoryTool.cs               # Memory persistence
 │       ├── GmailTool.cs                # Gmail integration
-│       └── GoogleCalendarTool.cs       # Calendar integration
+│       ├── GoogleCalendarTool.cs       # Calendar integration
+│       ├── BashTool.cs                 # Shell commands
+│       └── FileSystemTool.cs           # File operations
 │
 ├── PolaperBot.Infra/                   # Infrastructure layer
 │   ├── Extensions/
@@ -218,6 +240,8 @@ dotnet run --project PolaperBot.Api
 - ✅ **AI Integration** - Microsoft Agent Framework & Ollama
 - ✅ **External APIs** - Gmail API & Google Calendar API integration
 - ✅ **OAuth 2.0** - Google authentication flow
+- ✅ **Shell Access** - Execute system commands safely
+- ✅ **File System** - Full CRUD operations on files/folders
 - ✅ **Persistence** - SQLite with async operations
 - ✅ **DI Best Practices** - Extension methods for clean registration
 - ✅ **Async/Await** - Non-blocking I/O throughout

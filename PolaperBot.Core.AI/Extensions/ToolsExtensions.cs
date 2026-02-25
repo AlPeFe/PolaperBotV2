@@ -1,3 +1,5 @@
+using Google.Apis.Calendar.v3;
+using Google.Apis.Gmail.v1;
 using Microsoft.Extensions.AI;
 using Microsoft.Extensions.DependencyInjection;
 using PolaperBot.Core.AI.Configuration;
@@ -16,6 +18,20 @@ public static class ToolsExtensions
         services.AddSingleton<IGoogleServicesFactory, GoogleServicesFactory>();
         services.AddSingleton<GoogleServicesFactory>();
 
+#pragma warning disable CS8634
+        services.AddSingleton<GmailService?>(sp =>
+        {
+            var factory = sp.GetRequiredService<GoogleServicesFactory>();
+            return factory.CreateGmailServiceAsync().GetAwaiter().GetResult();
+        });
+
+        services.AddSingleton<CalendarService?>(sp =>
+        {
+            var factory = sp.GetRequiredService<GoogleServicesFactory>();
+            return factory.CreateCalendarServiceAsync().GetAwaiter().GetResult();
+        });
+#pragma warning restore CS8634
+
         services.AddSingleton<IMemoryService>(sp =>
         {
             var options = sp.GetRequiredService<AgentOptions>();
@@ -25,6 +41,8 @@ public static class ToolsExtensions
         services.AddSingleton<MemoryTool>();
         services.AddSingleton<GmailTool>();
         services.AddSingleton<GoogleCalendarTool>();
+        services.AddSingleton<BashTool>();
+        services.AddSingleton<FileSystemTool>();
 
         return services;
     }
@@ -41,6 +59,12 @@ public static class ToolsExtensions
 
         var calendarTool = serviceProvider.GetRequiredService<GoogleCalendarTool>();
         tools.AddRange(calendarTool.AsAITools());
+
+        var bashTool = serviceProvider.GetRequiredService<BashTool>();
+        tools.AddRange(bashTool.AsAITools());
+
+        var fileSystemTool = serviceProvider.GetRequiredService<FileSystemTool>();
+        tools.AddRange(fileSystemTool.AsAITools());
 
         return tools.ToArray();
     }

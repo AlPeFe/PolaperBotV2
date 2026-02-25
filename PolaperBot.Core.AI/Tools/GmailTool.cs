@@ -5,7 +5,6 @@ using Google.Apis.Gmail.v1;
 using Google.Apis.Gmail.v1.Data;
 using Microsoft.Extensions.AI;
 using Microsoft.Extensions.Logging;
-using PolaperBot.Core.AI.Services;
 
 namespace PolaperBot.Core.AI.Tools;
 
@@ -19,11 +18,11 @@ public class GmailTool : IGmailTool
     private readonly GmailService? _gmailService;
     private readonly ILogger<GmailTool> _logger;
 
-    public GmailTool(IGoogleServicesFactory factory, ILogger<GmailTool> logger)
+    public GmailTool(GmailService? gmailService, ILogger<GmailTool> logger)
     {
+        _gmailService = gmailService;
         _logger = logger;
-        _gmailService = factory.CreateGmailServiceAsync().GetAwaiter().GetResult();
-        
+
         if (_gmailService == null)
             _logger.LogWarning("GmailService not available - Gmail tools disabled");
     }

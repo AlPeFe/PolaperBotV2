@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PolaperBot.Core.AI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4a588621dbc9141693e8ca6bae809248c5cffb5d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e3f26ca32b27760d572d6453f28257fb6bf92e6a")]
 [assembly: System.Reflection.AssemblyProductAttribute("PolaperBot.Core.AI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PolaperBot.Core.AI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

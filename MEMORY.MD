@@ -33,7 +33,9 @@ PolaperBotV2/
 │   └── Tools/
 │       ├── MemoryTool.cs         # MEMORY.MD tool
 │       ├── GmailTool.cs          # Gmail integration
-│       └── GoogleCalendarTool.cs # Calendar integration
+│       ├── GoogleCalendarTool.cs # Calendar integration
+│       ├── BashTool.cs           # Shell commands
+│       └── FileSystemTool.cs     # File operations
 ├── PolaperBot.Infra/            # Infrastructure Layer (.NET 10)
 │   ├── Extensions/
 │   │   └── InfraExtensions.cs   # DI extensions
@@ -75,10 +77,28 @@ PolaperBotV2/
 - `SummarizeEmailsByDate(fecha)` - Get email summary by date
 
 ### GoogleCalendarTool
+- `GetCurrentDateTime()` - Get current date/time context
 - `CreateEvent(titulo, descripcion, fechaInicio, fechaFin, ubicacion)` - Create event
 - `GetUpcomingEvents(maxResultados)` - List upcoming events
 - `GetEventsByDate(fecha)` - Get events by date
 - `DeleteEvent(eventoId)` - Delete event
+
+### BashTool (Shell Access)
+- `ExecuteCommand(command)` - Execute shell/bash commands
+- `GetSystemInfo()` - Get OS, user, hostname, drives info
+
+### FileSystemTool (Full Permissions)
+- `ReadFile(filePath)` - Read file contents
+- `WriteFile(filePath, content)` - Create/overwrite files
+- `AppendToFile(filePath, content)` - Append to files
+- `ListDirectory(directoryPath)` - List files and directories
+- `CreateDirectory(directoryPath)` - Create directories
+- `DeleteFile(filePath)` - Delete files
+- `DeleteDirectory(directoryPath)` - Delete directories
+- `CopyFile(sourcePath, destinationPath)` - Copy files
+- `Move(sourcePath, destinationPath)` - Move/rename files
+- `Exists(path)` - Check if file/directory exists
+- `SearchFiles(pattern, directoryPath)` - Search files by pattern
 
 ## Implementation Tasks
 
@@ -95,6 +115,9 @@ PolaperBotV2/
 | 9 | Add Gmail integration | ✅ |
 | 10 | Add Google Calendar integration | ✅ |
 | 11 | Create GoogleServicesFactory with OAuth | ✅ |
+| 12 | Add BashTool for shell commands | ✅ |
+| 13 | Add FileSystemTool for file operations | ✅ |
+| 14 | Refactor tools to use proper DI | ✅ |
 
 ## Key Design Decisions
 
@@ -104,6 +127,7 @@ PolaperBotV2/
 4. **DI Separation**: Each layer has its own extension methods
 5. **Graceful Degradation**: Tools disabled when Google credentials missing
 6. **Factory Pattern**: `GoogleServicesFactory` handles OAuth and service creation
+7. **Full System Access**: BashTool and FileSystemTool with complete permissions
 
 ## API Endpoints
 
