@@ -18,7 +18,7 @@
           "Microsoft.Extensions.Hosting.Abstractions": "10.0.3",
           "Microsoft.Extensions.Logging.Abstractions": "10.0.3",
           "OllamaSharp": "5.4.16",
-          "Telegram.Bot": "22.4.4"
+          "Telegram.Bot": "22.3.0"
         },
         "runtime": {
           "PolaperBot.Core.AI.dll": {}
@@ -323,11 +323,11 @@
           }
         }
       },
-      "Telegram.Bot/22.4.4": {
+      "Telegram.Bot/22.3.0": {
         "runtime": {
           "lib/net6.0/Telegram.Bot.dll": {
-            "assemblyVersion": "22.4.4.0",
-            "fileVersion": "22.4.4.0"
+            "assemblyVersion": "22.3.0.0",
+            "fileVersion": "22.3.0.0"
           }
         }
       }
@@ -521,12 +521,12 @@
       "path": "system.numerics.tensors/10.0.3",
       "hashPath": "system.numerics.tensors.10.0.3.nupkg.sha512"
     },
-    "Telegram.Bot/22.4.4": {
+    "Telegram.Bot/22.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-LnSX4GMA3p4XZY6xsBZ9zQGyMYUW3htTcBNI19g8ISMM4/BWz7zLFXrrZ6nfE/vI9FB8RvdDrfqiaoB6911qmA==",
-      "path": "telegram.bot/22.4.4",
-      "hashPath": "telegram.bot.22.4.4.nupkg.sha512"
+      "sha512": "sha512-5qIvT5/YIxkKK6mJq4Vz0w106HqjXPc8qzMxcQgkGNQrwgRK1hbbe7yp4veYLEVjzGfWyrHsAezWFdlNUbUAow==",
+      "path": "telegram.bot/22.3.0",
+      "hashPath": "telegram.bot.22.3.0.nupkg.sha512"
     }
   }
 }
