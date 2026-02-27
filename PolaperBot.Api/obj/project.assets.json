@@ -626,6 +626,22 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
+      "Telegram.Bot/22.4.4": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Telegram.Bot.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Telegram.Bot.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "PolaperBot.Core.AI/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
@@ -634,7 +650,8 @@
           "Google.Apis.Gmail.v1": "1.69.0.3742",
           "Microsoft.Agents.AI": "1.0.0-rc1",
           "Microsoft.Extensions.AI": "10.3.0",
-          "OllamaSharp": "5.4.16"
+          "OllamaSharp": "5.4.16",
+          "Telegram.Bot": "22.4.4"
         },
         "compile": {
           "bin/placeholder/PolaperBot.Core.AI.dll": {}
@@ -1417,6 +1434,25 @@
         "system.numerics.tensors.10.0.3.nupkg.sha512",
         "system.numerics.tensors.nuspec",
         "useSharedDesignerContext.txt"
+      ]
+    },
+    "Telegram.Bot/22.4.4": {
+      "sha512": "LnSX4GMA3p4XZY6xsBZ9zQGyMYUW3htTcBNI19g8ISMM4/BWz7zLFXrrZ6nfE/vI9FB8RvdDrfqiaoB6911qmA==",
+      "type": "package",
+      "path": "telegram.bot/22.4.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net6.0/Telegram.Bot.dll",
+        "lib/net6.0/Telegram.Bot.pdb",
+        "lib/net6.0/Telegram.Bot.xml",
+        "lib/netstandard2.0/Telegram.Bot.dll",
+        "lib/netstandard2.0/Telegram.Bot.pdb",
+        "lib/netstandard2.0/Telegram.Bot.xml",
+        "package-icon.png",
+        "telegram.bot.22.4.4.nupkg.sha512",
+        "telegram.bot.nuspec"
       ]
     },
     "PolaperBot.Core.AI/1.0.0": {

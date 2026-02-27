@@ -484,6 +484,14 @@
           }
         }
       },
+      "Telegram.Bot/22.4.4": {
+        "runtime": {
+          "lib/net6.0/Telegram.Bot.dll": {
+            "assemblyVersion": "22.4.4.0",
+            "fileVersion": "22.4.4.0"
+          }
+        }
+      },
       "PolaperBot.Core.AI/1.0.0": {
         "dependencies": {
           "Google.Apis.Calendar.v3": "1.69.0.3667",
@@ -495,7 +503,8 @@
           "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.3",
           "Microsoft.Extensions.Hosting.Abstractions": "10.0.3",
           "Microsoft.Extensions.Logging.Abstractions": "10.0.3",
-          "OllamaSharp": "5.4.16"
+          "OllamaSharp": "5.4.16",
+          "Telegram.Bot": "22.4.4"
         },
         "runtime": {
           "PolaperBot.Core.AI.dll": {
@@ -735,6 +744,13 @@
       "sha512": "sha512-calKQ5nqV98lVRSCV7KFrlmw7nE7z6qIBWnMP+f7xAzY9H1cO15zJmkuZYM9RxYXDzQyI60/+dXd65UUY4HZFQ==",
       "path": "system.numerics.tensors/10.0.3",
       "hashPath": "system.numerics.tensors.10.0.3.nupkg.sha512"
+    },
+    "Telegram.Bot/22.4.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-LnSX4GMA3p4XZY6xsBZ9zQGyMYUW3htTcBNI19g8ISMM4/BWz7zLFXrrZ6nfE/vI9FB8RvdDrfqiaoB6911qmA==",
+      "path": "telegram.bot/22.4.4",
+      "hashPath": "telegram.bot.22.4.4.nupkg.sha512"
     },
     "PolaperBot.Core.AI/1.0.0": {
       "type": "project",

@@ -1,0 +1,19 @@
+2026-02-27 07:35:50.708 +01:00 [INF] Starting PolaperBot API
+2026-02-27 07:35:50.768 +01:00 [INF] Heartbeat service started - Interval: 30min, Triggers: GmailHbs, RemindersHbs
+2026-02-27 07:35:50.803 +01:00 [INF] Now listening on: http://localhost:5057
+2026-02-27 07:35:50.803 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-27 07:35:50.803 +01:00 [INF] Hosting environment: Development
+2026-02-27 07:35:50.803 +01:00 [INF] Content root path: /home/polaper/Projects/PolaperBotV2/PolaperBot.Api
+2026-02-27 07:36:34.412 +01:00 [INF] Starting PolaperBot API
+2026-02-27 07:36:34.453 +01:00 [INF] Heartbeat service started - Interval: 1min, Triggers: GmailHbs, RemindersHbs
+2026-02-27 07:36:34.484 +01:00 [INF] Now listening on: http://localhost:5057
+2026-02-27 07:36:34.485 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-27 07:36:34.485 +01:00 [INF] Hosting environment: Development
+2026-02-27 07:36:34.485 +01:00 [INF] Content root path: /home/polaper/Projects/PolaperBotV2/PolaperBot.Api
+2026-02-27 07:37:36.154 +01:00 [INF] Executing heartbeat triggers at "2026-02-27T07:37:36.1337805+01:00"
+2026-02-27 07:37:36.155 +01:00 [INF] Executing trigger: GmailHbs
+2026-02-27 07:37:36.155 +01:00 [INF] GmailHbs trigger executed - checking emails
+2026-02-27 07:37:36.155 +01:00 [INF] Trigger completed: GmailHbs
+2026-02-27 07:37:36.155 +01:00 [INF] Executing trigger: RemindersHbs
+2026-02-27 07:37:36.155 +01:00 [INF] RemindersHbs trigger executed - checking reminders
+2026-02-27 07:37:36.155 +01:00 [INF] Trigger completed: RemindersHbs

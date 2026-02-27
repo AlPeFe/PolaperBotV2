@@ -30,7 +30,14 @@ var googleOptions = new GoogleOptions
     EnableCalendar = bool.TryParse(builder.Configuration["Google:EnableCalendar"], out var enableCalendar) && enableCalendar
 };
 
-var dbPath = builder.Configuration["Database:SqlitePath"] ?? "sessions.db";
+var telegramOptions = new TelegramOptions
+{
+    BotToken = builder.Configuration["Telegram:BotToken"] ?? string.Empty,
+    MainChatId = long.TryParse(builder.Configuration["Telegram:MainChatId"], out var chatId) ? chatId : 0
+};
+
+var sessionDbPath = builder.Configuration["Database:SqlitePath"] ?? "sessions.db";
+var remindersDbPath = builder.Configuration["Database:RemindersDbPath"] ?? "reminders.db";
 
 builder.Services.AddCoreAiAgent(
     options =>
@@ -44,9 +51,15 @@ builder.Services.AddCoreAiAgent(
         options.TokenFolder = googleOptions.TokenFolder;
         options.EnableGmail = googleOptions.EnableGmail;
         options.EnableCalendar = googleOptions.EnableCalendar;
+    },
+    options =>
+    {
+        options.BotToken = telegramOptions.BotToken;
+        options.MainChatId = telegramOptions.MainChatId;
     });
 
-builder.Services.AddSqliteSessionStore(dbPath);
+builder.Services.AddSqliteSessionStore(sessionDbPath);
+builder.Services.AddSqliteReminderRepository(remindersDbPath);
 builder.Services.AddHeartbeatService();
 
 var app = builder.Build();

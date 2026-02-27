@@ -89,3 +89,4 @@
 /home/polaper/Projects/PolaperBotV2/PolaperBot.Api/bin/Debug/net10.0/Serilog.Sinks.Console.dll
 /home/polaper/Projects/PolaperBotV2/PolaperBot.Api/bin/Debug/net10.0/Serilog.Sinks.Debug.dll
 /home/polaper/Projects/PolaperBotV2/PolaperBot.Api/bin/Debug/net10.0/Serilog.Sinks.File.dll
+/home/polaper/Projects/PolaperBotV2/PolaperBot.Api/bin/Debug/net10.0/Telegram.Bot.dll

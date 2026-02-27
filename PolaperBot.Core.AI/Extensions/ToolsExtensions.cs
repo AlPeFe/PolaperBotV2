@@ -3,6 +3,7 @@ using Google.Apis.Gmail.v1;
 using Microsoft.Extensions.AI;
 using Microsoft.Extensions.DependencyInjection;
 using PolaperBot.Core.AI.Configuration;
+using PolaperBot.Core.AI.Reminders;
 using PolaperBot.Core.AI.Services;
 using PolaperBot.Core.AI.Tools;
 
@@ -43,6 +44,7 @@ public static class ToolsExtensions
         services.AddSingleton<GoogleCalendarTool>();
         services.AddSingleton<BashTool>();
         services.AddSingleton<FileSystemTool>();
+        services.AddSingleton<ReminderTool>();
 
         return services;
     }
@@ -65,6 +67,12 @@ public static class ToolsExtensions
 
         var fileSystemTool = serviceProvider.GetRequiredService<FileSystemTool>();
         tools.AddRange(fileSystemTool.AsAITools());
+
+        var reminderTool = serviceProvider.GetService<ReminderTool>();
+        if (reminderTool != null)
+        {
+            tools.AddRange(reminderTool.AsAITools());
+        }
 
         return tools.ToArray();
     }
