@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "JmGFNkfmNVs=",
+  "dgSpecHash": "TVu+WyFK8VE=",
   "success": true,
   "projectFilePath": "/home/polaper/Projects/PolaperBotV2/PolaperBot.Api/PolaperBot.Api.csproj",
   "expectedPackageFiles": [
@@ -37,7 +37,7 @@
     "/home/polaper/.nuget/packages/system.codedom/7.0.0/system.codedom.7.0.0.nupkg.sha512",
     "/home/polaper/.nuget/packages/system.management/7.0.2/system.management.7.0.2.nupkg.sha512",
     "/home/polaper/.nuget/packages/system.numerics.tensors/10.0.3/system.numerics.tensors.10.0.3.nupkg.sha512",
-    "/home/polaper/.nuget/packages/telegram.bot/22.4.4/telegram.bot.22.4.4.nupkg.sha512"
+    "/home/polaper/.nuget/packages/telegram.bot/22.3.0/telegram.bot.22.3.0.nupkg.sha512"
   ],
   "logs": []
 }

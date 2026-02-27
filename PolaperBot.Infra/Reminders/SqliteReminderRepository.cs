@@ -50,11 +50,11 @@ public class SqliteReminderRepository : IReminderRepository
             SELECT last_insert_rowid();
             """;
         cmd.Parameters.AddWithValue("$description", reminder.Description);
-        cmd.Parameters.AddWithValue("$scheduledFor", reminder.ScheduledFor.ToString("O"));
-        cmd.Parameters.AddWithValue("$createdAt", reminder.CreatedAt.ToString("O"));
+        cmd.Parameters.AddWithValue("$scheduledFor", reminder.ScheduledFor.ToString("yyyy-MM-dd HH:mm:ss"));
+        cmd.Parameters.AddWithValue("$createdAt", reminder.CreatedAt.ToString("yyyy-MM-dd HH:mm:ss"));
         cmd.Parameters.AddWithValue("$chatId", reminder.TelegramChatId);
         cmd.Parameters.AddWithValue("$isNotified", reminder.IsNotified ? 1 : 0);
-        cmd.Parameters.AddWithValue("$notifiedAt", reminder.NotifiedAt?.ToString("O") ?? (object)DBNull.Value);
+        cmd.Parameters.AddWithValue("$notifiedAt", reminder.NotifiedAt?.ToString("yyyy-MM-dd HH:mm:ss") ?? (object)DBNull.Value);
 
         var id = Convert.ToInt32(await cmd.ExecuteScalarAsync(cancellationToken));
         
@@ -103,8 +103,8 @@ public class SqliteReminderRepository : IReminderRepository
 
     public async Task<IReadOnlyList<Reminder>> GetUpcomingAsync(TimeSpan advanceNotice, CancellationToken cancellationToken = default)
     {
-        var now = DateTime.UtcNow;
-        var threshold = now.Add(advanceNotice);
+        var threshold = DateTime.UtcNow.Add(advanceNotice);
+        var thresholdStr = threshold.ToString("yyyy-MM-dd HH:mm:ss");
 
         using var conn = new SqliteConnection(_connectionString);
         await conn.OpenAsync(cancellationToken);
@@ -113,12 +113,10 @@ public class SqliteReminderRepository : IReminderRepository
         cmd.CommandText = """
             SELECT * FROM Reminders 
             WHERE IsNotified = 0 
-              AND ScheduledFor <= $threshold
-              AND ScheduledFor > $now
             ORDER BY ScheduledFor ASC
             """;
-        cmd.Parameters.AddWithValue("$threshold", threshold.ToString("O"));
-        cmd.Parameters.AddWithValue("$now", now.ToString("O"));
+       
+        _logger.LogDebug("GetUpcomingAsync - Threshold: {Threshold}", thresholdStr);
 
         var reminders = new List<Reminder>();
         using var reader = await cmd.ExecuteReaderAsync(cancellationToken);
@@ -126,6 +124,8 @@ public class SqliteReminderRepository : IReminderRepository
         {
             reminders.Add(MapFromReader(reader));
         }
+
+        _logger.LogDebug("GetUpcomingAsync - Found {Count} reminders", reminders.Count);
 
         return reminders;
     }
@@ -142,7 +142,7 @@ public class SqliteReminderRepository : IReminderRepository
             WHERE Id = $id
             """;
         cmd.Parameters.AddWithValue("$id", id);
-        cmd.Parameters.AddWithValue("$notifiedAt", DateTime.UtcNow.ToString("O"));
+        cmd.Parameters.AddWithValue("$notifiedAt", DateTime.UtcNow.ToString("yyyy-MM-dd HH:mm:ss"));
 
         await cmd.ExecuteNonQueryAsync(cancellationToken);
         _logger.LogInformation("Marked reminder {Id} as notified", id);

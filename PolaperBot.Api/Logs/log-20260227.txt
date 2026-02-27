@@ -17,3 +17,838 @@
 2026-02-27 07:37:36.155 +01:00 [INF] Executing trigger: RemindersHbs
 2026-02-27 07:37:36.155 +01:00 [INF] RemindersHbs trigger executed - checking reminders
 2026-02-27 07:37:36.155 +01:00 [INF] Trigger completed: RemindersHbs
+2026-02-27 17:01:23.172 +01:00 [INF] Starting PolaperBot API
+2026-02-27 17:01:23.216 +01:00 [INF] Heartbeat service started - Interval: 1min, Triggers: GmailHbs, RemindersHbs
+2026-02-27 17:01:23.253 +01:00 [INF] Now listening on: http://localhost:5057
+2026-02-27 17:01:23.254 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-27 17:01:23.254 +01:00 [INF] Hosting environment: Development
+2026-02-27 17:01:23.254 +01:00 [INF] Content root path: /home/polaper/Projects/PolaperBotV2/PolaperBot.Api
+2026-02-27 17:01:30.867 +01:00 [INF] Starting PolaperBot API
+2026-02-27 17:01:30.905 +01:00 [INF] Heartbeat service started - Interval: 1min, Triggers: GmailHbs, RemindersHbs
+2026-02-27 17:01:30.937 +01:00 [INF] Now listening on: http://localhost:5057
+2026-02-27 17:01:30.937 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-27 17:01:30.937 +01:00 [INF] Hosting environment: Development
+2026-02-27 17:01:30.937 +01:00 [INF] Content root path: /home/polaper/Projects/PolaperBotV2/PolaperBot.Api
+2026-02-27 17:02:14.337 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NotSupportedException: Deserialization of interface or abstract types is not supported. Type 'Telegram.Bot.ITelegramBotClient'. Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+ ---> System.NotSupportedException: Deserialization of interface or abstract types is not supported. Type 'Telegram.Bot.ITelegramBotClient'.
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException(ReadStack& state, Utf8JsonReader& reader, Exception innerException)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.ContinueDeserialize[TReadBufferState,TStream](TReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, T& value)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsync[TReadBufferState,TStream](TStream utf8Json, TReadBufferState bufferState, CancellationToken cancellationToken)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsObjectAsync(PipeReader utf8Json, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.HttpRequestJsonExtensions.ReadFromJsonAsync(HttpRequest request, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.HttpRequestJsonExtensions.ReadFromJsonAsync(HttpRequest request, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<HandleRequestBodyAndCompileRequestDelegateForJson>g__TryReadBodyAsync|102_0(HttpContext httpContext, Type bodyType, String parameterTypeName, String parameterName, Boolean allowEmptyRequestBody, Boolean throwOnBadRequest, JsonTypeInfo jsonTypeInfo)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<>c__DisplayClass102_2.<<HandleRequestBodyAndCompileRequestDelegateForJson>b__2>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-02-27 17:02:14.401 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NotSupportedException: Deserialization of interface or abstract types is not supported. Type 'Telegram.Bot.ITelegramBotClient'. Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+ ---> System.NotSupportedException: Deserialization of interface or abstract types is not supported. Type 'Telegram.Bot.ITelegramBotClient'.
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException(ReadStack& state, Utf8JsonReader& reader, Exception innerException)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.ContinueDeserialize[TReadBufferState,TStream](TReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, T& value)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsync[TReadBufferState,TStream](TStream utf8Json, TReadBufferState bufferState, CancellationToken cancellationToken)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsObjectAsync(PipeReader utf8Json, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.HttpRequestJsonExtensions.ReadFromJsonAsync(HttpRequest request, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.HttpRequestJsonExtensions.ReadFromJsonAsync(HttpRequest request, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<HandleRequestBodyAndCompileRequestDelegateForJson>g__TryReadBodyAsync|102_0(HttpContext httpContext, Type bodyType, String parameterTypeName, String parameterName, Boolean allowEmptyRequestBody, Boolean throwOnBadRequest, JsonTypeInfo jsonTypeInfo)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<>c__DisplayClass102_2.<<HandleRequestBodyAndCompileRequestDelegateForJson>b__2>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-02-27 17:02:16.456 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NotSupportedException: Deserialization of interface or abstract types is not supported. Type 'Telegram.Bot.ITelegramBotClient'. Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+ ---> System.NotSupportedException: Deserialization of interface or abstract types is not supported. Type 'Telegram.Bot.ITelegramBotClient'.
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException(ReadStack& state, Utf8JsonReader& reader, Exception innerException)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.ContinueDeserialize[TReadBufferState,TStream](TReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, T& value)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsync[TReadBufferState,TStream](TStream utf8Json, TReadBufferState bufferState, CancellationToken cancellationToken)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsObjectAsync(PipeReader utf8Json, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.HttpRequestJsonExtensions.ReadFromJsonAsync(HttpRequest request, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.HttpRequestJsonExtensions.ReadFromJsonAsync(HttpRequest request, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<HandleRequestBodyAndCompileRequestDelegateForJson>g__TryReadBodyAsync|102_0(HttpContext httpContext, Type bodyType, String parameterTypeName, String parameterName, Boolean allowEmptyRequestBody, Boolean throwOnBadRequest, JsonTypeInfo jsonTypeInfo)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<>c__DisplayClass102_2.<<HandleRequestBodyAndCompileRequestDelegateForJson>b__2>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-02-27 17:02:20.510 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NotSupportedException: Deserialization of interface or abstract types is not supported. Type 'Telegram.Bot.ITelegramBotClient'. Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+ ---> System.NotSupportedException: Deserialization of interface or abstract types is not supported. Type 'Telegram.Bot.ITelegramBotClient'.
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException(ReadStack& state, Utf8JsonReader& reader, Exception innerException)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.ContinueDeserialize[TReadBufferState,TStream](TReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, T& value)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsync[TReadBufferState,TStream](TStream utf8Json, TReadBufferState bufferState, CancellationToken cancellationToken)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsObjectAsync(PipeReader utf8Json, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.HttpRequestJsonExtensions.ReadFromJsonAsync(HttpRequest request, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.HttpRequestJsonExtensions.ReadFromJsonAsync(HttpRequest request, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<HandleRequestBodyAndCompileRequestDelegateForJson>g__TryReadBodyAsync|102_0(HttpContext httpContext, Type bodyType, String parameterTypeName, String parameterName, Boolean allowEmptyRequestBody, Boolean throwOnBadRequest, JsonTypeInfo jsonTypeInfo)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<>c__DisplayClass102_2.<<HandleRequestBodyAndCompileRequestDelegateForJson>b__2>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-02-27 17:06:02.679 +01:00 [INF] Starting PolaperBot API
+2026-02-27 17:06:02.736 +01:00 [INF] Heartbeat service started - Interval: 1min, Triggers: GmailHbs, RemindersHbs
+2026-02-27 17:06:02.773 +01:00 [INF] Now listening on: http://localhost:5057
+2026-02-27 17:06:02.774 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-27 17:06:02.774 +01:00 [INF] Hosting environment: Development
+2026-02-27 17:06:02.774 +01:00 [INF] Content root path: /home/polaper/Projects/PolaperBotV2/PolaperBot.Api
+2026-02-27 17:06:49.921 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NotSupportedException: Deserialization of interface or abstract types is not supported. Type 'Telegram.Bot.ITelegramBotClient'. Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+ ---> System.NotSupportedException: Deserialization of interface or abstract types is not supported. Type 'Telegram.Bot.ITelegramBotClient'.
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ThrowNotSupportedException(ReadStack& state, Utf8JsonReader& reader, Exception innerException)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.ContinueDeserialize[TReadBufferState,TStream](TReadBufferState& bufferState, JsonReaderState& jsonReaderState, ReadStack& readStack, T& value)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsync[TReadBufferState,TStream](TStream utf8Json, TReadBufferState bufferState, CancellationToken cancellationToken)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.DeserializeAsObjectAsync(PipeReader utf8Json, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.HttpRequestJsonExtensions.ReadFromJsonAsync(HttpRequest request, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.HttpRequestJsonExtensions.ReadFromJsonAsync(HttpRequest request, JsonTypeInfo jsonTypeInfo, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<HandleRequestBodyAndCompileRequestDelegateForJson>g__TryReadBodyAsync|102_0(HttpContext httpContext, Type bodyType, String parameterTypeName, String parameterName, Boolean allowEmptyRequestBody, Boolean throwOnBadRequest, JsonTypeInfo jsonTypeInfo)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<>c__DisplayClass102_2.<<HandleRequestBodyAndCompileRequestDelegateForJson>b__2>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-02-27 17:07:02.740 +01:00 [INF] Executing heartbeat triggers at "2026-02-27T17:07:02.7400918+01:00"
+2026-02-27 17:07:02.740 +01:00 [INF] Executing trigger: GmailHbs
+2026-02-27 17:07:02.741 +01:00 [INF] GmailHbs trigger executed - checking emails
+2026-02-27 17:07:02.741 +01:00 [INF] Trigger completed: GmailHbs
+2026-02-27 17:07:02.741 +01:00 [WRN] Trigger not found: RemindersHbs
+2026-02-27 17:09:50.571 +01:00 [INF] Starting PolaperBot API
+2026-02-27 17:09:50.624 +01:00 [INF] Heartbeat service started - Interval: 1min, Triggers: GmailHbs, RemindersHbs
+2026-02-27 17:09:50.664 +01:00 [INF] Now listening on: http://localhost:5057
+2026-02-27 17:09:50.665 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-27 17:09:50.665 +01:00 [INF] Hosting environment: Development
+2026-02-27 17:09:50.665 +01:00 [INF] Content root path: /home/polaper/Projects/PolaperBotV2/PolaperBot.Api
+2026-02-27 17:10:50.629 +01:00 [INF] Executing heartbeat triggers at "2026-02-27T17:10:50.6289711+01:00"
+2026-02-27 17:10:50.629 +01:00 [INF] Executing trigger: GmailHbs
+2026-02-27 17:10:50.630 +01:00 [INF] GmailHbs trigger executed - checking emails
+2026-02-27 17:10:50.630 +01:00 [INF] Trigger completed: GmailHbs
+2026-02-27 17:10:50.630 +01:00 [WRN] Trigger not found: RemindersHbs
+2026-02-27 17:11:16.073 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No service for type 'Telegram.Bot.ITelegramBotClient' has been registered.
+   at lambda_method1(Closure, Object, HttpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-02-27 17:14:55.556 +01:00 [INF] Starting PolaperBot API
+2026-02-27 17:14:55.622 +01:00 [INF] Reminders table initialized
+2026-02-27 17:14:55.633 +01:00 [INF] Heartbeat service started - Interval: 1min, Triggers: GmailHbs, RemindersHbs
+2026-02-27 17:14:55.671 +01:00 [INF] Now listening on: http://localhost:5057
+2026-02-27 17:14:55.672 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-27 17:14:55.672 +01:00 [INF] Hosting environment: Development
+2026-02-27 17:14:55.672 +01:00 [INF] Content root path: /home/polaper/Projects/PolaperBotV2/PolaperBot.Api
+2026-02-27 17:15:55.637 +01:00 [INF] Executing heartbeat triggers at "2026-02-27T17:15:55.6372525+01:00"
+2026-02-27 17:15:55.638 +01:00 [INF] Executing trigger: GmailHbs
+2026-02-27 17:15:55.638 +01:00 [INF] GmailHbs trigger executed - checking emails
+2026-02-27 17:15:55.638 +01:00 [INF] Trigger completed: GmailHbs
+2026-02-27 17:15:55.638 +01:00 [INF] Executing trigger: RemindersHbs
+2026-02-27 17:15:55.639 +01:00 [INF] RemindersHbs trigger executed - checking upcoming reminders
+2026-02-27 17:15:55.642 +01:00 [INF] Trigger completed: RemindersHbs
+2026-02-27 17:15:59.799 +01:00 [WRN] Google credentials not found at ./credentials/google_credentials.json
+2026-02-27 17:15:59.800 +01:00 [WRN] GmailService not available - Gmail tools disabled
+2026-02-27 17:16:07.556 +01:00 [WRN] Google credentials not found at ./credentials/google_credentials.json
+2026-02-27 17:16:07.558 +01:00 [WRN] CalendarService not available - Calendar tools disabled
+2026-02-27 17:16:07.589 +01:00 [INF] Sessions table initialized
+2026-02-27 17:16:07.684 +01:00 [INF] Created new session for user 851002317
+2026-02-27 17:16:08.605 +01:00 [INF] Saved session for user 851002317 - Tokens: 1403+21=1424, Time: 887ms
+2026-02-27 17:16:09.713 +01:00 [INF] Saved session for user 851002317 - Tokens: 1421+36=1457, Time: 778ms
+2026-02-27 17:16:10.655 +01:00 [INF] Saved session for user 851002317 - Tokens: 1439+40=1479, Time: 799ms
+2026-02-27 17:16:11.582 +01:00 [INF] Saved session for user 851002317 - Tokens: 1462+28=1490, Time: 794ms
+2026-02-27 17:16:12.567 +01:00 [INF] Saved session for user 851002317 - Tokens: 1480+50=1530, Time: 869ms
+2026-02-27 17:16:55.635 +01:00 [INF] Executing heartbeat triggers at "2026-02-27T17:16:55.6357440+01:00"
+2026-02-27 17:16:55.635 +01:00 [INF] Executing trigger: GmailHbs
+2026-02-27 17:16:55.635 +01:00 [INF] GmailHbs trigger executed - checking emails
+2026-02-27 17:16:55.636 +01:00 [INF] Trigger completed: GmailHbs
+2026-02-27 17:16:55.636 +01:00 [INF] Executing trigger: RemindersHbs
+2026-02-27 17:16:55.636 +01:00 [INF] RemindersHbs trigger executed - checking upcoming reminders
+2026-02-27 17:16:55.636 +01:00 [INF] Trigger completed: RemindersHbs
+2026-02-27 17:17:55.636 +01:00 [INF] Executing heartbeat triggers at "2026-02-27T17:17:55.6360116+01:00"
+2026-02-27 17:17:55.636 +01:00 [INF] Executing trigger: GmailHbs
+2026-02-27 17:17:55.636 +01:00 [INF] GmailHbs trigger executed - checking emails
+2026-02-27 17:17:55.636 +01:00 [INF] Trigger completed: GmailHbs
+2026-02-27 17:17:55.636 +01:00 [INF] Executing trigger: RemindersHbs
+2026-02-27 17:17:55.636 +01:00 [INF] RemindersHbs trigger executed - checking upcoming reminders
+2026-02-27 17:17:55.636 +01:00 [INF] Trigger completed: RemindersHbs
+2026-02-27 17:18:38.612 +01:00 [INF] Starting PolaperBot API
+2026-02-27 17:18:38.660 +01:00 [INF] Reminders table initialized
+2026-02-27 17:18:38.670 +01:00 [INF] Heartbeat service started - Interval: 1min, Triggers: GmailHbs, RemindersHbs
+2026-02-27 17:18:38.708 +01:00 [INF] Now listening on: http://localhost:5057
+2026-02-27 17:18:38.708 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-27 17:18:38.708 +01:00 [INF] Hosting environment: Development
+2026-02-27 17:18:38.708 +01:00 [INF] Content root path: /home/polaper/Projects/PolaperBotV2/PolaperBot.Api
+2026-02-27 17:18:49.317 +01:00 [INF] Sessions table initialized
+2026-02-27 17:18:51.767 +01:00 [INF] Saved session for user 851002317 - Tokens: 3861+154=4015, Time: 2357ms
+2026-02-27 17:19:10.286 +01:00 [INF] Saved session for user 851002317 - Tokens: 1947+100=2047, Time: 1343ms
+2026-02-27 17:19:38.673 +01:00 [INF] Executing heartbeat triggers at "2026-02-27T17:19:38.6728853+01:00"
+2026-02-27 17:19:38.673 +01:00 [INF] Executing trigger: GmailHbs
+2026-02-27 17:19:38.673 +01:00 [INF] GmailHbs trigger executed - checking emails
+2026-02-27 17:19:38.673 +01:00 [INF] Trigger completed: GmailHbs
+2026-02-27 17:19:38.673 +01:00 [INF] Executing trigger: RemindersHbs
+2026-02-27 17:19:38.674 +01:00 [INF] RemindersHbs trigger executed - checking upcoming reminders
+2026-02-27 17:19:38.675 +01:00 [INF] Trigger completed: RemindersHbs
+2026-02-27 17:19:58.666 +01:00 [INF] Saved session for user 851002317 - Tokens: 4100+427=4527, Time: 5153ms
+2026-02-27 17:20:38.672 +01:00 [INF] Executing heartbeat triggers at "2026-02-27T17:20:38.6720686+01:00"
+2026-02-27 17:20:38.672 +01:00 [INF] Executing trigger: GmailHbs
+2026-02-27 17:20:38.672 +01:00 [INF] GmailHbs trigger executed - checking emails
+2026-02-27 17:20:38.672 +01:00 [INF] Trigger completed: GmailHbs
+2026-02-27 17:20:38.672 +01:00 [INF] Executing trigger: RemindersHbs
+2026-02-27 17:20:38.672 +01:00 [INF] RemindersHbs trigger executed - checking upcoming reminders
+2026-02-27 17:20:38.672 +01:00 [INF] Trigger completed: RemindersHbs
+2026-02-27 17:21:01.350 +01:00 [INF] Saved session for user 851002317 - Tokens: 4131+287=4418, Time: 8899ms
+2026-02-27 17:21:38.672 +01:00 [INF] Executing heartbeat triggers at "2026-02-27T17:21:38.6722021+01:00"
+2026-02-27 17:21:38.672 +01:00 [INF] Executing trigger: GmailHbs
+2026-02-27 17:21:38.672 +01:00 [INF] GmailHbs trigger executed - checking emails
+2026-02-27 17:21:38.672 +01:00 [INF] Trigger completed: GmailHbs
+2026-02-27 17:21:38.672 +01:00 [INF] Executing trigger: RemindersHbs
+2026-02-27 17:21:38.672 +01:00 [INF] RemindersHbs trigger executed - checking upcoming reminders
+2026-02-27 17:21:38.672 +01:00 [INF] Trigger completed: RemindersHbs
+2026-02-27 17:22:38.671 +01:00 [INF] Executing heartbeat triggers at "2026-02-27T17:22:38.6717255+01:00"
+2026-02-27 17:22:38.671 +01:00 [INF] Executing trigger: GmailHbs
+2026-02-27 17:22:38.671 +01:00 [INF] GmailHbs trigger executed - checking emails
+2026-02-27 17:22:38.671 +01:00 [INF] Trigger completed: GmailHbs
+2026-02-27 17:22:38.671 +01:00 [INF] Executing trigger: RemindersHbs
+2026-02-27 17:22:38.671 +01:00 [INF] RemindersHbs trigger executed - checking upcoming reminders
+2026-02-27 17:22:38.672 +01:00 [INF] Trigger completed: RemindersHbs
+2026-02-27 17:23:38.672 +01:00 [INF] Executing heartbeat triggers at "2026-02-27T17:23:38.6723199+01:00"
+2026-02-27 17:23:38.672 +01:00 [INF] Executing trigger: GmailHbs
+2026-02-27 17:23:38.672 +01:00 [INF] GmailHbs trigger executed - checking emails
+2026-02-27 17:23:38.672 +01:00 [INF] Trigger completed: GmailHbs
+2026-02-27 17:23:38.672 +01:00 [INF] Executing trigger: RemindersHbs
+2026-02-27 17:23:38.672 +01:00 [INF] RemindersHbs trigger executed - checking upcoming reminders
+2026-02-27 17:23:38.672 +01:00 [INF] Trigger completed: RemindersHbs
+2026-02-27 17:24:38.672 +01:00 [INF] Executing heartbeat triggers at "2026-02-27T17:24:38.6726279+01:00"
+2026-02-27 17:24:38.672 +01:00 [INF] Executing trigger: GmailHbs
+2026-02-27 17:24:38.672 +01:00 [INF] GmailHbs trigger executed - checking emails
+2026-02-27 17:24:38.672 +01:00 [INF] Trigger completed: GmailHbs
+2026-02-27 17:24:38.672 +01:00 [INF] Executing trigger: RemindersHbs
+2026-02-27 17:24:38.672 +01:00 [INF] RemindersHbs trigger executed - checking upcoming reminders
+2026-02-27 17:24:38.673 +01:00 [INF] Trigger completed: RemindersHbs
+2026-02-27 17:24:52.986 +01:00 [INF] Starting PolaperBot API
+2026-02-27 17:24:53.032 +01:00 [INF] Reminders table initialized
+2026-02-27 17:24:53.042 +01:00 [INF] Heartbeat service started - Interval: 1min, Triggers: GmailHbs, RemindersHbs
+2026-02-27 17:24:53.077 +01:00 [ERR] Hosting failed to start
+System.IO.IOException: Failed to bind to address http://127.0.0.1:5057: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Address already in use
+ ---> System.Net.Sockets.SocketException (98): Address already in use
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, Boolean disconnectOnFailure, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass28_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__14_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2026-02-27 17:25:01.032 +01:00 [INF] Starting PolaperBot API
+2026-02-27 17:25:01.079 +01:00 [INF] Reminders table initialized
+2026-02-27 17:25:01.089 +01:00 [INF] Heartbeat service started - Interval: 1min, Triggers: GmailHbs, RemindersHbs
+2026-02-27 17:25:01.127 +01:00 [ERR] Hosting failed to start
+System.IO.IOException: Failed to bind to address http://127.0.0.1:5057: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Address already in use
+ ---> System.Net.Sockets.SocketException (98): Address already in use
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, Boolean disconnectOnFailure, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass28_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__14_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2026-02-27 17:25:09.635 +01:00 [INF] Starting PolaperBot API
+2026-02-27 17:25:09.680 +01:00 [INF] Reminders table initialized
+2026-02-27 17:25:09.691 +01:00 [INF] Heartbeat service started - Interval: 1min, Triggers: GmailHbs, RemindersHbs
+2026-02-27 17:25:09.723 +01:00 [INF] Now listening on: http://localhost:5057
+2026-02-27 17:25:09.723 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-27 17:25:09.723 +01:00 [INF] Hosting environment: Development
+2026-02-27 17:25:09.723 +01:00 [INF] Content root path: /home/polaper/Projects/PolaperBotV2/PolaperBot.Api
+2026-02-27 17:25:36.778 +01:00 [INF] Sessions table initialized
+2026-02-27 17:25:39.599 +01:00 [INF] Created reminder 1: 'hola que tal' for "2026-02-27T17:27:38.0000000" (ChatId: 851002317)
+2026-02-27 17:25:40.403 +01:00 [INF] Saved session for user 851002317 - Tokens: 6676+278=6954, Time: 3533ms
+2026-02-27 17:26:09.693 +01:00 [INF] Executing heartbeat triggers at "2026-02-27T17:26:09.6937228+01:00"
+2026-02-27 17:26:09.694 +01:00 [INF] Executing trigger: GmailHbs
+2026-02-27 17:26:09.694 +01:00 [INF] GmailHbs trigger executed - checking emails
+2026-02-27 17:26:09.694 +01:00 [INF] Trigger completed: GmailHbs
+2026-02-27 17:26:09.694 +01:00 [INF] Executing trigger: RemindersHbs
+2026-02-27 17:26:09.695 +01:00 [INF] RemindersHbs trigger executed - checking upcoming reminders
+2026-02-27 17:26:09.696 +01:00 [INF] Trigger completed: RemindersHbs
+2026-02-27 17:27:09.693 +01:00 [INF] Executing heartbeat triggers at "2026-02-27T17:27:09.6934323+01:00"
+2026-02-27 17:27:09.693 +01:00 [INF] Executing trigger: GmailHbs
+2026-02-27 17:27:09.693 +01:00 [INF] GmailHbs trigger executed - checking emails
+2026-02-27 17:27:09.693 +01:00 [INF] Trigger completed: GmailHbs
+2026-02-27 17:27:09.693 +01:00 [INF] Executing trigger: RemindersHbs
+2026-02-27 17:27:09.693 +01:00 [INF] RemindersHbs trigger executed - checking upcoming reminders
+2026-02-27 17:27:09.694 +01:00 [INF] Trigger completed: RemindersHbs
+2026-02-27 17:28:09.693 +01:00 [INF] Executing heartbeat triggers at "2026-02-27T17:28:09.6931172+01:00"
+2026-02-27 17:28:09.693 +01:00 [INF] Executing trigger: GmailHbs
+2026-02-27 17:28:09.693 +01:00 [INF] GmailHbs trigger executed - checking emails
+2026-02-27 17:28:09.693 +01:00 [INF] Trigger completed: GmailHbs
+2026-02-27 17:28:09.693 +01:00 [INF] Executing trigger: RemindersHbs
+2026-02-27 17:28:09.693 +01:00 [INF] RemindersHbs trigger executed - checking upcoming reminders
+2026-02-27 17:28:09.694 +01:00 [INF] Trigger completed: RemindersHbs
+2026-02-27 17:29:09.692 +01:00 [INF] Executing heartbeat triggers at "2026-02-27T17:29:09.6928017+01:00"
+2026-02-27 17:29:09.692 +01:00 [INF] Executing trigger: GmailHbs
+2026-02-27 17:29:09.692 +01:00 [INF] GmailHbs trigger executed - checking emails
+2026-02-27 17:29:09.693 +01:00 [INF] Trigger completed: GmailHbs
+2026-02-27 17:29:09.693 +01:00 [INF] Executing trigger: RemindersHbs
+2026-02-27 17:29:09.693 +01:00 [INF] RemindersHbs trigger executed - checking upcoming reminders
+2026-02-27 17:29:09.693 +01:00 [INF] Trigger completed: RemindersHbs
+2026-02-27 17:30:09.693 +01:00 [INF] Executing heartbeat triggers at "2026-02-27T17:30:09.6933769+01:00"
+2026-02-27 17:30:09.693 +01:00 [INF] Executing trigger: GmailHbs
+2026-02-27 17:30:09.693 +01:00 [INF] GmailHbs trigger executed - checking emails
+2026-02-27 17:30:09.693 +01:00 [INF] Trigger completed: GmailHbs
+2026-02-27 17:30:09.693 +01:00 [INF] Executing trigger: RemindersHbs
+2026-02-27 17:30:09.693 +01:00 [INF] RemindersHbs trigger executed - checking upcoming reminders
+2026-02-27 17:30:09.693 +01:00 [INF] Trigger completed: RemindersHbs
+2026-02-27 17:31:09.693 +01:00 [INF] Executing heartbeat triggers at "2026-02-27T17:31:09.6929773+01:00"
+2026-02-27 17:31:09.693 +01:00 [INF] Executing trigger: GmailHbs
+2026-02-27 17:31:09.693 +01:00 [INF] GmailHbs trigger executed - checking emails
+2026-02-27 17:31:09.693 +01:00 [INF] Trigger completed: GmailHbs
+2026-02-27 17:31:09.693 +01:00 [INF] Executing trigger: RemindersHbs
+2026-02-27 17:31:09.693 +01:00 [INF] RemindersHbs trigger executed - checking upcoming reminders
+2026-02-27 17:31:09.693 +01:00 [INF] Trigger completed: RemindersHbs
+2026-02-27 17:32:09.693 +01:00 [INF] Executing heartbeat triggers at "2026-02-27T17:32:09.6935337+01:00"
+2026-02-27 17:32:09.693 +01:00 [INF] Executing trigger: GmailHbs
+2026-02-27 17:32:09.693 +01:00 [INF] GmailHbs trigger executed - checking emails
+2026-02-27 17:32:09.693 +01:00 [INF] Trigger completed: GmailHbs
+2026-02-27 17:32:09.693 +01:00 [INF] Executing trigger: RemindersHbs
+2026-02-27 17:32:09.693 +01:00 [INF] RemindersHbs trigger executed - checking upcoming reminders
+2026-02-27 17:32:09.693 +01:00 [INF] Trigger completed: RemindersHbs
+2026-02-27 17:33:09.692 +01:00 [INF] Executing heartbeat triggers at "2026-02-27T17:33:09.6929440+01:00"
+2026-02-27 17:33:09.693 +01:00 [INF] Executing trigger: GmailHbs
+2026-02-27 17:33:09.693 +01:00 [INF] GmailHbs trigger executed - checking emails
+2026-02-27 17:33:09.693 +01:00 [INF] Trigger completed: GmailHbs
+2026-02-27 17:33:09.693 +01:00 [INF] Executing trigger: RemindersHbs
+2026-02-27 17:33:09.693 +01:00 [INF] RemindersHbs trigger executed - checking upcoming reminders
+2026-02-27 17:33:09.693 +01:00 [INF] Trigger completed: RemindersHbs
+2026-02-27 17:34:09.693 +01:00 [INF] Executing heartbeat triggers at "2026-02-27T17:34:09.6934611+01:00"
+2026-02-27 17:34:09.693 +01:00 [INF] Executing trigger: GmailHbs
+2026-02-27 17:34:09.693 +01:00 [INF] GmailHbs trigger executed - checking emails
+2026-02-27 17:34:09.693 +01:00 [INF] Trigger completed: GmailHbs
+2026-02-27 17:34:09.693 +01:00 [INF] Executing trigger: RemindersHbs
+2026-02-27 17:34:09.693 +01:00 [INF] RemindersHbs trigger executed - checking upcoming reminders
+2026-02-27 17:34:09.694 +01:00 [INF] Trigger completed: RemindersHbs
+2026-02-27 17:35:09.693 +01:00 [INF] Executing heartbeat triggers at "2026-02-27T17:35:09.6929909+01:00"
+2026-02-27 17:35:09.693 +01:00 [INF] Executing trigger: GmailHbs
+2026-02-27 17:35:09.693 +01:00 [INF] GmailHbs trigger executed - checking emails
+2026-02-27 17:35:09.693 +01:00 [INF] Trigger completed: GmailHbs
+2026-02-27 17:35:09.693 +01:00 [INF] Executing trigger: RemindersHbs
+2026-02-27 17:35:09.693 +01:00 [INF] RemindersHbs trigger executed - checking upcoming reminders
+2026-02-27 17:35:09.693 +01:00 [INF] Trigger completed: RemindersHbs
+2026-02-27 17:36:09.693 +01:00 [INF] Executing heartbeat triggers at "2026-02-27T17:36:09.6933933+01:00"
+2026-02-27 17:36:09.693 +01:00 [INF] Executing trigger: GmailHbs
+2026-02-27 17:36:09.693 +01:00 [INF] GmailHbs trigger executed - checking emails
+2026-02-27 17:36:09.693 +01:00 [INF] Trigger completed: GmailHbs
+2026-02-27 17:36:09.693 +01:00 [INF] Executing trigger: RemindersHbs
+2026-02-27 17:36:09.693 +01:00 [INF] RemindersHbs trigger executed - checking upcoming reminders
+2026-02-27 17:36:09.693 +01:00 [INF] Trigger completed: RemindersHbs
+2026-02-27 17:37:09.692 +01:00 [INF] Executing heartbeat triggers at "2026-02-27T17:37:09.6928215+01:00"
+2026-02-27 17:37:09.692 +01:00 [INF] Executing trigger: GmailHbs
+2026-02-27 17:37:09.692 +01:00 [INF] GmailHbs trigger executed - checking emails
+2026-02-27 17:37:09.692 +01:00 [INF] Trigger completed: GmailHbs
+2026-02-27 17:37:09.692 +01:00 [INF] Executing trigger: RemindersHbs
+2026-02-27 17:37:09.692 +01:00 [INF] RemindersHbs trigger executed - checking upcoming reminders
+2026-02-27 17:37:26.524 +01:00 [INF] Trigger completed: RemindersHbs
+2026-02-27 17:37:59.558 +01:00 [INF] Created reminder 2: 'hola que tal' for "2026-02-27T17:38:58.0000000" (ChatId: 851002317)
+2026-02-27 17:38:00.382 +01:00 [INF] Saved session for user 851002317 - Tokens: 6888+276=7164, Time: 4002ms
+2026-02-27 17:38:09.693 +01:00 [INF] Executing heartbeat triggers at "2026-02-27T17:38:09.6935891+01:00"
+2026-02-27 17:38:09.693 +01:00 [INF] Executing trigger: GmailHbs
+2026-02-27 17:38:09.693 +01:00 [INF] GmailHbs trigger executed - checking emails
+2026-02-27 17:38:09.693 +01:00 [INF] Trigger completed: GmailHbs
+2026-02-27 17:38:09.693 +01:00 [INF] Executing trigger: RemindersHbs
+2026-02-27 17:38:09.693 +01:00 [INF] RemindersHbs trigger executed - checking upcoming reminders
+2026-02-27 17:38:34.490 +01:00 [INF] Trigger completed: RemindersHbs
+2026-02-27 17:39:09.693 +01:00 [INF] Executing heartbeat triggers at "2026-02-27T17:39:09.6931199+01:00"
+2026-02-27 17:39:09.693 +01:00 [INF] Executing trigger: GmailHbs
+2026-02-27 17:39:09.693 +01:00 [INF] GmailHbs trigger executed - checking emails
+2026-02-27 17:39:09.693 +01:00 [INF] Trigger completed: GmailHbs
+2026-02-27 17:39:09.693 +01:00 [INF] Executing trigger: RemindersHbs
+2026-02-27 17:39:09.693 +01:00 [INF] RemindersHbs trigger executed - checking upcoming reminders
+2026-02-27 17:39:12.545 +01:00 [INF] Trigger completed: RemindersHbs
+2026-02-27 17:40:09.692 +01:00 [INF] Executing heartbeat triggers at "2026-02-27T17:40:09.6926221+01:00"
+2026-02-27 17:40:09.692 +01:00 [INF] Executing trigger: GmailHbs
+2026-02-27 17:40:09.692 +01:00 [INF] GmailHbs trigger executed - checking emails
+2026-02-27 17:40:09.692 +01:00 [INF] Trigger completed: GmailHbs
+2026-02-27 17:40:09.692 +01:00 [INF] Executing trigger: RemindersHbs
+2026-02-27 17:40:09.692 +01:00 [INF] RemindersHbs trigger executed - checking upcoming reminders
+2026-02-27 17:40:53.393 +01:00 [INF] Trigger completed: RemindersHbs
+2026-02-27 17:41:09.693 +01:00 [INF] Executing heartbeat triggers at "2026-02-27T17:41:09.6928739+01:00"
+2026-02-27 17:41:09.693 +01:00 [INF] Executing trigger: GmailHbs
+2026-02-27 17:41:09.693 +01:00 [INF] GmailHbs trigger executed - checking emails
+2026-02-27 17:41:09.693 +01:00 [INF] Trigger completed: GmailHbs
+2026-02-27 17:41:09.693 +01:00 [INF] Executing trigger: RemindersHbs
+2026-02-27 17:41:09.693 +01:00 [INF] RemindersHbs trigger executed - checking upcoming reminders
+2026-02-27 17:41:14.478 +01:00 [INF] Trigger completed: RemindersHbs
+2026-02-27 17:43:16.790 +01:00 [INF] Starting PolaperBot API
+2026-02-27 17:43:16.838 +01:00 [INF] Reminders table initialized
+2026-02-27 17:43:16.849 +01:00 [INF] Heartbeat service started - Interval: 1min, Triggers: GmailHbs, RemindersHbs
+2026-02-27 17:43:16.882 +01:00 [INF] Now listening on: http://localhost:5057
+2026-02-27 17:43:16.882 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-27 17:43:16.882 +01:00 [INF] Hosting environment: Development
+2026-02-27 17:43:16.882 +01:00 [INF] Content root path: /home/polaper/Projects/PolaperBotV2/PolaperBot.Api
+2026-02-27 17:44:16.852 +01:00 [INF] Executing heartbeat triggers at "2026-02-27T17:44:16.8518782+01:00"
+2026-02-27 17:44:16.852 +01:00 [INF] Executing trigger: GmailHbs
+2026-02-27 17:44:16.852 +01:00 [INF] GmailHbs trigger executed - checking emails
+2026-02-27 17:44:16.852 +01:00 [INF] Trigger completed: GmailHbs
+2026-02-27 17:44:16.852 +01:00 [INF] Executing trigger: RemindersHbs
+2026-02-27 17:44:16.853 +01:00 [INF] RemindersHbs trigger executed - checking upcoming reminders
+2026-02-27 17:44:25.542 +01:00 [INF] Trigger completed: RemindersHbs
+2026-02-27 17:44:34.034 +01:00 [INF] Sessions table initialized
+2026-02-27 17:44:40.715 +01:00 [INF] Created reminder 3: 'sexo' for "2026-02-27T17:46:39.0000000" (ChatId: 851002317)
+2026-02-27 17:44:41.504 +01:00 [INF] Saved session for user 851002317 - Tokens: 7034+891=7925, Time: 7361ms
+2026-02-27 17:45:16.850 +01:00 [INF] Executing heartbeat triggers at "2026-02-27T17:45:16.8500348+01:00"
+2026-02-27 17:45:16.850 +01:00 [INF] Executing trigger: GmailHbs
+2026-02-27 17:45:16.850 +01:00 [INF] GmailHbs trigger executed - checking emails
+2026-02-27 17:45:16.850 +01:00 [INF] Trigger completed: GmailHbs
+2026-02-27 17:45:16.850 +01:00 [INF] Executing trigger: RemindersHbs
+2026-02-27 17:45:16.850 +01:00 [INF] RemindersHbs trigger executed - checking upcoming reminders
+2026-02-27 17:45:24.499 +01:00 [INF] Trigger completed: RemindersHbs
+2026-02-27 17:46:07.695 +01:00 [INF] Starting PolaperBot API
+2026-02-27 17:46:07.741 +01:00 [INF] Reminders table initialized
+2026-02-27 17:46:07.752 +01:00 [INF] Heartbeat service started - Interval: 1min, Triggers: GmailHbs, RemindersHbs
+2026-02-27 17:46:07.787 +01:00 [INF] Now listening on: http://localhost:5057
+2026-02-27 17:46:07.787 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-27 17:46:07.787 +01:00 [INF] Hosting environment: Development
+2026-02-27 17:46:07.788 +01:00 [INF] Content root path: /home/polaper/Projects/PolaperBotV2/PolaperBot.Api
+2026-02-27 17:47:07.756 +01:00 [INF] Executing heartbeat triggers at "2026-02-27T17:47:07.7557988+01:00"
+2026-02-27 17:47:07.756 +01:00 [INF] Executing trigger: GmailHbs
+2026-02-27 17:47:07.756 +01:00 [INF] GmailHbs trigger executed - checking emails
+2026-02-27 17:47:07.756 +01:00 [INF] Trigger completed: GmailHbs
+2026-02-27 17:47:07.756 +01:00 [INF] Executing trigger: RemindersHbs
+2026-02-27 17:47:07.757 +01:00 [INF] RemindersHbs trigger executed - checking upcoming reminders
+2026-02-27 17:47:16.329 +01:00 [INF] Trigger completed: RemindersHbs
+2026-02-27 17:48:07.754 +01:00 [INF] Executing heartbeat triggers at "2026-02-27T17:48:07.7539873+01:00"
+2026-02-27 17:48:07.754 +01:00 [INF] Executing trigger: GmailHbs
+2026-02-27 17:48:07.754 +01:00 [INF] GmailHbs trigger executed - checking emails
+2026-02-27 17:48:07.754 +01:00 [INF] Trigger completed: GmailHbs
+2026-02-27 17:48:07.754 +01:00 [INF] Executing trigger: RemindersHbs
+2026-02-27 17:48:07.754 +01:00 [INF] RemindersHbs trigger executed - checking upcoming reminders
+2026-02-27 17:48:10.856 +01:00 [INF] Trigger completed: RemindersHbs
+2026-02-27 17:50:47.309 +01:00 [INF] Starting PolaperBot API
+2026-02-27 17:50:47.358 +01:00 [INF] Reminders table initialized
+2026-02-27 17:50:47.369 +01:00 [INF] Heartbeat service started - Interval: 1min, Triggers: GmailHbs, RemindersHbs
+2026-02-27 17:50:47.409 +01:00 [INF] Now listening on: http://localhost:5057
+2026-02-27 17:50:47.409 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-27 17:50:47.409 +01:00 [INF] Hosting environment: Development
+2026-02-27 17:50:47.409 +01:00 [INF] Content root path: /home/polaper/Projects/PolaperBotV2/PolaperBot.Api
+2026-02-27 17:51:47.373 +01:00 [INF] Executing heartbeat triggers at "2026-02-27T17:51:47.3728771+01:00"
+2026-02-27 17:51:47.374 +01:00 [INF] Executing trigger: GmailHbs
+2026-02-27 17:51:47.374 +01:00 [INF] GmailHbs trigger executed - checking emails
+2026-02-27 17:51:47.374 +01:00 [INF] Trigger completed: GmailHbs
+2026-02-27 17:51:47.374 +01:00 [INF] Executing trigger: RemindersHbs
+2026-02-27 17:51:47.376 +01:00 [INF] RemindersHbs trigger executed - checking upcoming reminders
+2026-02-27 17:51:55.604 +01:00 [INF] Trigger completed: RemindersHbs
+2026-02-27 17:52:10.099 +01:00 [INF] Sessions table initialized
+2026-02-27 17:52:10.270 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Text.Json.JsonException: The JSON value could not be converted to System.String. Path: $.properties.telegramChatId.type | LineNumber: 0 | BytePositionInLine: 405.
+ ---> System.InvalidOperationException: Cannot get the value of a token type 'StartArray' as a string.
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_ExpectedString(JsonTokenType tokenType)
+   at System.Text.Json.Utf8JsonReader.GetString()
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonDictionaryConverter`3.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TDictionary& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.Deserialize(Utf8JsonReader& reader, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 utf8Json, JsonTypeInfo`1 jsonTypeInfo, Nullable`1 actualByteCount)
+   at System.Text.Json.JsonSerializer.Deserialize[TValue](JsonElement element, JsonSerializerOptions options)
+   at OllamaSharp.MicrosoftAi.AbstractionMapper.ToOllamaSharpTool(AIFunctionDeclaration function)
+   at OllamaSharp.MicrosoftAi.AbstractionMapper.ToOllamaSharpTool(AITool tool)
+   at System.Linq.Enumerable.ListSelectIterator`2.MoveNext()
+   at System.Linq.Enumerable.IEnumerableWhereIterator`1.MoveNext()
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.Serialize(Utf8JsonWriter writer, T& rootValue, Object rootValueBoxed)
+   at System.Text.Json.JsonSerializer.WriteString[TValue](TValue& value, JsonTypeInfo`1 jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](TValue value, JsonSerializerOptions options)
+   at OllamaSharp.OllamaApiClient.ChatAsync(ChatRequest request, CancellationToken cancellationToken)+MoveNext()
+   at OllamaSharp.OllamaApiClient.ChatAsync(ChatRequest request, CancellationToken cancellationToken)+System.Threading.Tasks.Sources.IValueTaskSource<System.Boolean>.GetResult()
+   at OllamaSharp.IAsyncEnumerableExtensions.StreamToEndAsync[Tin,Tout](IAsyncEnumerable`1 stream, IAppender`2 appender, Action`1 itemCallback)
+   at OllamaSharp.IAsyncEnumerableExtensions.StreamToEndAsync[Tin,Tout](IAsyncEnumerable`1 stream, IAppender`2 appender, Action`1 itemCallback)
+   at OllamaSharp.OllamaApiClient.Microsoft.Extensions.AI.IChatClient.GetResponseAsync(IEnumerable`1 messages, ChatOptions options, CancellationToken cancellationToken)
+   at Microsoft.Extensions.AI.FunctionInvokingChatClient.GetResponseAsync(IEnumerable`1 messages, ChatOptions options, CancellationToken cancellationToken)
+   at Microsoft.Agents.AI.ChatClientAgent.RunCoreAsync(IEnumerable`1 messages, AgentSession session, AgentRunOptions options, CancellationToken cancellationToken)
+   at Microsoft.Agents.AI.ChatClientAgent.RunCoreAsync(IEnumerable`1 messages, AgentSession session, AgentRunOptions options, CancellationToken cancellationToken)
+   at PolaperBot.Core.AI.Services.AgentService.SendMessageAsync(Int64 userId, String message, CancellationToken cancellationToken) in /home/polaper/Projects/PolaperBotV2/PolaperBot.Core.AI/Services/AgentService.cs:line 31
+   at PolaperBot.Api.Endpoints.TelegramEndpoints.<>c.<<MapTelegramEndpoints>b__1_0>d.MoveNext() in /home/polaper/Projects/PolaperBotV2/PolaperBot.Api/Endpoints/TelegramEndpoints.cs:line 29
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.ExecuteTaskResult[T](Task`1 task, HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-02-27 17:52:17.515 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Text.Json.JsonException: The JSON value could not be converted to System.String. Path: $.properties.telegramChatId.type | LineNumber: 0 | BytePositionInLine: 405.
+ ---> System.InvalidOperationException: Cannot get the value of a token type 'StartArray' as a string.
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_ExpectedString(JsonTokenType tokenType)
+   at System.Text.Json.Utf8JsonReader.GetString()
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonDictionaryConverter`3.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TDictionary& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.Deserialize(Utf8JsonReader& reader, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 utf8Json, JsonTypeInfo`1 jsonTypeInfo, Nullable`1 actualByteCount)
+   at System.Text.Json.JsonSerializer.Deserialize[TValue](JsonElement element, JsonSerializerOptions options)
+   at OllamaSharp.MicrosoftAi.AbstractionMapper.ToOllamaSharpTool(AIFunctionDeclaration function)
+   at OllamaSharp.MicrosoftAi.AbstractionMapper.ToOllamaSharpTool(AITool tool)
+   at System.Linq.Enumerable.ListSelectIterator`2.MoveNext()
+   at System.Linq.Enumerable.IEnumerableWhereIterator`1.MoveNext()
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.Serialize(Utf8JsonWriter writer, T& rootValue, Object rootValueBoxed)
+   at System.Text.Json.JsonSerializer.WriteString[TValue](TValue& value, JsonTypeInfo`1 jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](TValue value, JsonSerializerOptions options)
+   at OllamaSharp.OllamaApiClient.ChatAsync(ChatRequest request, CancellationToken cancellationToken)+MoveNext()
+   at OllamaSharp.OllamaApiClient.ChatAsync(ChatRequest request, CancellationToken cancellationToken)+System.Threading.Tasks.Sources.IValueTaskSource<System.Boolean>.GetResult()
+   at OllamaSharp.IAsyncEnumerableExtensions.StreamToEndAsync[Tin,Tout](IAsyncEnumerable`1 stream, IAppender`2 appender, Action`1 itemCallback)
+   at OllamaSharp.IAsyncEnumerableExtensions.StreamToEndAsync[Tin,Tout](IAsyncEnumerable`1 stream, IAppender`2 appender, Action`1 itemCallback)
+   at OllamaSharp.OllamaApiClient.Microsoft.Extensions.AI.IChatClient.GetResponseAsync(IEnumerable`1 messages, ChatOptions options, CancellationToken cancellationToken)
+   at Microsoft.Extensions.AI.FunctionInvokingChatClient.GetResponseAsync(IEnumerable`1 messages, ChatOptions options, CancellationToken cancellationToken)
+   at Microsoft.Agents.AI.ChatClientAgent.RunCoreAsync(IEnumerable`1 messages, AgentSession session, AgentRunOptions options, CancellationToken cancellationToken)
+   at Microsoft.Agents.AI.ChatClientAgent.RunCoreAsync(IEnumerable`1 messages, AgentSession session, AgentRunOptions options, CancellationToken cancellationToken)
+   at PolaperBot.Core.AI.Services.AgentService.SendMessageAsync(Int64 userId, String message, CancellationToken cancellationToken) in /home/polaper/Projects/PolaperBotV2/PolaperBot.Core.AI/Services/AgentService.cs:line 31
+   at PolaperBot.Api.Endpoints.TelegramEndpoints.<>c.<<MapTelegramEndpoints>b__1_0>d.MoveNext() in /home/polaper/Projects/PolaperBotV2/PolaperBot.Api/Endpoints/TelegramEndpoints.cs:line 29
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.ExecuteTaskResult[T](Task`1 task, HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-02-27 17:52:22.153 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Text.Json.JsonException: The JSON value could not be converted to System.String. Path: $.properties.telegramChatId.type | LineNumber: 0 | BytePositionInLine: 405.
+ ---> System.InvalidOperationException: Cannot get the value of a token type 'StartArray' as a string.
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_ExpectedString(JsonTokenType tokenType)
+   at System.Text.Json.Serialization.Converters.StringConverter.Read(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonDictionaryConverter`3.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TDictionary& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.Deserialize(Utf8JsonReader& reader, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 utf8Json, JsonTypeInfo`1 jsonTypeInfo, Nullable`1 actualByteCount)
+   at System.Text.Json.JsonSerializer.Deserialize[TValue](JsonElement element, JsonSerializerOptions options)
+   at OllamaSharp.MicrosoftAi.AbstractionMapper.ToOllamaSharpTool(AIFunctionDeclaration function)
+   at OllamaSharp.MicrosoftAi.AbstractionMapper.ToOllamaSharpTool(AITool tool)
+   at System.Linq.Enumerable.ListSelectIterator`2.MoveNext()
+   at System.Linq.Enumerable.IEnumerableWhereIterator`1.MoveNext()
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.Serialize(Utf8JsonWriter writer, T& rootValue, Object rootValueBoxed)
+   at System.Text.Json.JsonSerializer.WriteString[TValue](TValue& value, JsonTypeInfo`1 jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](TValue value, JsonSerializerOptions options)
+   at OllamaSharp.OllamaApiClient.ChatAsync(ChatRequest request, CancellationToken cancellationToken)+MoveNext()
+   at OllamaSharp.OllamaApiClient.ChatAsync(ChatRequest request, CancellationToken cancellationToken)+System.Threading.Tasks.Sources.IValueTaskSource<System.Boolean>.GetResult()
+   at OllamaSharp.IAsyncEnumerableExtensions.StreamToEndAsync[Tin,Tout](IAsyncEnumerable`1 stream, IAppender`2 appender, Action`1 itemCallback)
+   at OllamaSharp.IAsyncEnumerableExtensions.StreamToEndAsync[Tin,Tout](IAsyncEnumerable`1 stream, IAppender`2 appender, Action`1 itemCallback)
+   at OllamaSharp.OllamaApiClient.Microsoft.Extensions.AI.IChatClient.GetResponseAsync(IEnumerable`1 messages, ChatOptions options, CancellationToken cancellationToken)
+   at Microsoft.Extensions.AI.FunctionInvokingChatClient.GetResponseAsync(IEnumerable`1 messages, ChatOptions options, CancellationToken cancellationToken)
+   at Microsoft.Agents.AI.ChatClientAgent.RunCoreAsync(IEnumerable`1 messages, AgentSession session, AgentRunOptions options, CancellationToken cancellationToken)
+   at Microsoft.Agents.AI.ChatClientAgent.RunCoreAsync(IEnumerable`1 messages, AgentSession session, AgentRunOptions options, CancellationToken cancellationToken)
+   at PolaperBot.Core.AI.Services.AgentService.SendMessageAsync(Int64 userId, String message, CancellationToken cancellationToken) in /home/polaper/Projects/PolaperBotV2/PolaperBot.Core.AI/Services/AgentService.cs:line 31
+   at PolaperBot.Api.Endpoints.TelegramEndpoints.<>c.<<MapTelegramEndpoints>b__1_0>d.MoveNext() in /home/polaper/Projects/PolaperBotV2/PolaperBot.Api/Endpoints/TelegramEndpoints.cs:line 29
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.ExecuteTaskResult[T](Task`1 task, HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-02-27 17:52:29.155 +01:00 [INF] Starting PolaperBot API
+2026-02-27 17:52:29.201 +01:00 [INF] Reminders table initialized
+2026-02-27 17:52:29.212 +01:00 [INF] Heartbeat service started - Interval: 1min, Triggers: GmailHbs, RemindersHbs
+2026-02-27 17:52:29.249 +01:00 [INF] Now listening on: http://localhost:5057
+2026-02-27 17:52:29.249 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-27 17:52:29.249 +01:00 [INF] Hosting environment: Development
+2026-02-27 17:52:29.249 +01:00 [INF] Content root path: /home/polaper/Projects/PolaperBotV2/PolaperBot.Api
+2026-02-27 17:52:36.962 +01:00 [INF] Sessions table initialized
+2026-02-27 17:52:37.167 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Text.Json.JsonException: The JSON value could not be converted to System.String. Path: $.properties.telegramChatId.type | LineNumber: 0 | BytePositionInLine: 405.
+ ---> System.InvalidOperationException: Cannot get the value of a token type 'StartArray' as a string.
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_ExpectedString(JsonTokenType tokenType)
+   at System.Text.Json.Utf8JsonReader.GetString()
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonDictionaryConverter`3.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TDictionary& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.Deserialize(Utf8JsonReader& reader, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 utf8Json, JsonTypeInfo`1 jsonTypeInfo, Nullable`1 actualByteCount)
+   at System.Text.Json.JsonSerializer.Deserialize[TValue](JsonElement element, JsonSerializerOptions options)
+   at OllamaSharp.MicrosoftAi.AbstractionMapper.ToOllamaSharpTool(AIFunctionDeclaration function)
+   at OllamaSharp.MicrosoftAi.AbstractionMapper.ToOllamaSharpTool(AITool tool)
+   at System.Linq.Enumerable.ListSelectIterator`2.MoveNext()
+   at System.Linq.Enumerable.IEnumerableWhereIterator`1.MoveNext()
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.Serialize(Utf8JsonWriter writer, T& rootValue, Object rootValueBoxed)
+   at System.Text.Json.JsonSerializer.WriteString[TValue](TValue& value, JsonTypeInfo`1 jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](TValue value, JsonSerializerOptions options)
+   at OllamaSharp.OllamaApiClient.ChatAsync(ChatRequest request, CancellationToken cancellationToken)+MoveNext()
+   at OllamaSharp.OllamaApiClient.ChatAsync(ChatRequest request, CancellationToken cancellationToken)+System.Threading.Tasks.Sources.IValueTaskSource<System.Boolean>.GetResult()
+   at OllamaSharp.IAsyncEnumerableExtensions.StreamToEndAsync[Tin,Tout](IAsyncEnumerable`1 stream, IAppender`2 appender, Action`1 itemCallback)
+   at OllamaSharp.IAsyncEnumerableExtensions.StreamToEndAsync[Tin,Tout](IAsyncEnumerable`1 stream, IAppender`2 appender, Action`1 itemCallback)
+   at OllamaSharp.OllamaApiClient.Microsoft.Extensions.AI.IChatClient.GetResponseAsync(IEnumerable`1 messages, ChatOptions options, CancellationToken cancellationToken)
+   at Microsoft.Extensions.AI.FunctionInvokingChatClient.GetResponseAsync(IEnumerable`1 messages, ChatOptions options, CancellationToken cancellationToken)
+   at Microsoft.Agents.AI.ChatClientAgent.RunCoreAsync(IEnumerable`1 messages, AgentSession session, AgentRunOptions options, CancellationToken cancellationToken)
+   at Microsoft.Agents.AI.ChatClientAgent.RunCoreAsync(IEnumerable`1 messages, AgentSession session, AgentRunOptions options, CancellationToken cancellationToken)
+   at PolaperBot.Core.AI.Services.AgentService.SendMessageAsync(Int64 userId, String message, CancellationToken cancellationToken) in /home/polaper/Projects/PolaperBotV2/PolaperBot.Core.AI/Services/AgentService.cs:line 31
+   at PolaperBot.Api.Endpoints.TelegramEndpoints.<>c.<<MapTelegramEndpoints>b__1_0>d.MoveNext() in /home/polaper/Projects/PolaperBotV2/PolaperBot.Api/Endpoints/TelegramEndpoints.cs:line 29
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.ExecuteTaskResult[T](Task`1 task, HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-02-27 17:53:28.631 +01:00 [INF] Starting PolaperBot API
+2026-02-27 17:53:28.691 +01:00 [INF] Reminders table initialized
+2026-02-27 17:53:28.703 +01:00 [INF] Heartbeat service started - Interval: 1min, Triggers: GmailHbs, RemindersHbs
+2026-02-27 17:53:28.740 +01:00 [INF] Now listening on: http://localhost:5057
+2026-02-27 17:53:28.740 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-27 17:53:28.740 +01:00 [INF] Hosting environment: Development
+2026-02-27 17:53:28.740 +01:00 [INF] Content root path: /home/polaper/Projects/PolaperBotV2/PolaperBot.Api
+2026-02-27 17:53:37.626 +01:00 [INF] Sessions table initialized
+2026-02-27 17:53:37.835 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Text.Json.JsonException: The JSON value could not be converted to System.String. Path: $.properties.telegramChatId.type | LineNumber: 0 | BytePositionInLine: 405.
+ ---> System.InvalidOperationException: Cannot get the value of a token type 'StartArray' as a string.
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_ExpectedString(JsonTokenType tokenType)
+   at System.Text.Json.Utf8JsonReader.GetString()
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonDictionaryConverter`3.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TDictionary& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.Deserialize(Utf8JsonReader& reader, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 utf8Json, JsonTypeInfo`1 jsonTypeInfo, Nullable`1 actualByteCount)
+   at System.Text.Json.JsonSerializer.Deserialize[TValue](JsonElement element, JsonSerializerOptions options)
+   at OllamaSharp.MicrosoftAi.AbstractionMapper.ToOllamaSharpTool(AIFunctionDeclaration function)
+   at OllamaSharp.MicrosoftAi.AbstractionMapper.ToOllamaSharpTool(AITool tool)
+   at System.Linq.Enumerable.ListSelectIterator`2.MoveNext()
+   at System.Linq.Enumerable.IEnumerableWhereIterator`1.MoveNext()
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.Serialize(Utf8JsonWriter writer, T& rootValue, Object rootValueBoxed)
+   at System.Text.Json.JsonSerializer.WriteString[TValue](TValue& value, JsonTypeInfo`1 jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](TValue value, JsonSerializerOptions options)
+   at OllamaSharp.OllamaApiClient.ChatAsync(ChatRequest request, CancellationToken cancellationToken)+MoveNext()
+   at OllamaSharp.OllamaApiClient.ChatAsync(ChatRequest request, CancellationToken cancellationToken)+System.Threading.Tasks.Sources.IValueTaskSource<System.Boolean>.GetResult()
+   at OllamaSharp.IAsyncEnumerableExtensions.StreamToEndAsync[Tin,Tout](IAsyncEnumerable`1 stream, IAppender`2 appender, Action`1 itemCallback)
+   at OllamaSharp.IAsyncEnumerableExtensions.StreamToEndAsync[Tin,Tout](IAsyncEnumerable`1 stream, IAppender`2 appender, Action`1 itemCallback)
+   at OllamaSharp.OllamaApiClient.Microsoft.Extensions.AI.IChatClient.GetResponseAsync(IEnumerable`1 messages, ChatOptions options, CancellationToken cancellationToken)
+   at Microsoft.Extensions.AI.FunctionInvokingChatClient.GetResponseAsync(IEnumerable`1 messages, ChatOptions options, CancellationToken cancellationToken)
+   at Microsoft.Agents.AI.ChatClientAgent.RunCoreAsync(IEnumerable`1 messages, AgentSession session, AgentRunOptions options, CancellationToken cancellationToken)
+   at Microsoft.Agents.AI.ChatClientAgent.RunCoreAsync(IEnumerable`1 messages, AgentSession session, AgentRunOptions options, CancellationToken cancellationToken)
+   at PolaperBot.Core.AI.Services.AgentService.SendMessageAsync(Int64 userId, String message, CancellationToken cancellationToken) in /home/polaper/Projects/PolaperBotV2/PolaperBot.Core.AI/Services/AgentService.cs:line 31
+   at PolaperBot.Api.Endpoints.TelegramEndpoints.<>c.<<MapTelegramEndpoints>b__1_0>d.MoveNext() in /home/polaper/Projects/PolaperBotV2/PolaperBot.Api/Endpoints/TelegramEndpoints.cs:line 29
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.ExecuteTaskResult[T](Task`1 task, HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-02-27 17:54:23.644 +01:00 [INF] Starting PolaperBot API
+2026-02-27 17:54:23.693 +01:00 [INF] Reminders table initialized
+2026-02-27 17:54:23.703 +01:00 [INF] Heartbeat service started - Interval: 1min, Triggers: GmailHbs, RemindersHbs
+2026-02-27 17:54:23.740 +01:00 [INF] Now listening on: http://localhost:5057
+2026-02-27 17:54:23.740 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-27 17:54:23.740 +01:00 [INF] Hosting environment: Development
+2026-02-27 17:54:23.740 +01:00 [INF] Content root path: /home/polaper/Projects/PolaperBotV2/PolaperBot.Api
+2026-02-27 17:56:08.660 +01:00 [INF] Starting PolaperBot API
+2026-02-27 17:56:08.716 +01:00 [INF] Reminders table initialized
+2026-02-27 17:56:08.727 +01:00 [INF] Heartbeat service started - Interval: 1min, Triggers: GmailHbs, RemindersHbs
+2026-02-27 17:56:08.764 +01:00 [INF] Now listening on: http://localhost:5057
+2026-02-27 17:56:08.765 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-27 17:56:08.765 +01:00 [INF] Hosting environment: Development
+2026-02-27 17:56:08.765 +01:00 [INF] Content root path: /home/polaper/Projects/PolaperBotV2/PolaperBot.Api
+2026-02-27 17:57:08.730 +01:00 [INF] Executing heartbeat triggers at "2026-02-27T17:57:08.7304275+01:00"
+2026-02-27 17:57:08.731 +01:00 [INF] Executing trigger: GmailHbs
+2026-02-27 17:57:08.731 +01:00 [INF] GmailHbs trigger executed - checking emails
+2026-02-27 17:57:08.731 +01:00 [INF] Trigger completed: GmailHbs
+2026-02-27 17:57:08.731 +01:00 [INF] Executing trigger: RemindersHbs
+2026-02-27 17:57:08.732 +01:00 [INF] RemindersHbs trigger executed - checking upcoming reminders
+2026-02-27 17:57:18.186 +01:00 [INF] Trigger completed: RemindersHbs
+2026-02-27 17:57:38.568 +01:00 [INF] Sessions table initialized
+2026-02-27 17:57:58.136 +01:00 [INF] Saved session for user 851002317 - Tokens: 15172+2413=17585, Time: 19464ms
+2026-02-27 17:58:08.728 +01:00 [INF] Executing heartbeat triggers at "2026-02-27T17:58:08.7288222+01:00"
+2026-02-27 17:58:08.729 +01:00 [INF] Executing trigger: GmailHbs
+2026-02-27 17:58:08.729 +01:00 [INF] GmailHbs trigger executed - checking emails
+2026-02-27 17:58:08.729 +01:00 [INF] Trigger completed: GmailHbs
+2026-02-27 17:58:08.729 +01:00 [INF] Executing trigger: RemindersHbs
+2026-02-27 17:58:08.729 +01:00 [INF] RemindersHbs trigger executed - checking upcoming reminders
+2026-02-27 17:58:08.729 +01:00 [INF] Trigger completed: RemindersHbs
+2026-02-27 17:58:14.748 +01:00 [INF] Saved session for user 851002317 - Tokens: 18049+1925=19974, Time: 16335ms
+2026-02-27 17:58:20.693 +01:00 [INF] Saved session for user 851002317 - Tokens: 7322+538=7860, Time: 5816ms
+2026-02-27 17:58:22.613 +01:00 [INF] Saved session for user 851002317 - Tokens: 2394+139=2533, Time: 1787ms
+2026-02-27 17:58:24.625 +01:00 [INF] Saved session for user 851002317 - Tokens: 2420+166=2586, Time: 1838ms
+2026-02-27 17:58:26.371 +01:00 [INF] Saved session for user 851002317 - Tokens: 2424+147=2571, Time: 1622ms
+2026-02-27 17:58:31.069 +01:00 [INF] Saved session for user 851002317 - Tokens: 4978+453=5431, Time: 4566ms
+2026-02-27 17:59:07.364 +01:00 [INF] Saved session for user 851002317 - Tokens: 10380+1662=12042, Time: 13856ms
+2026-02-27 17:59:08.729 +01:00 [INF] Executing heartbeat triggers at "2026-02-27T17:59:08.7289495+01:00"
+2026-02-27 17:59:08.729 +01:00 [INF] Executing trigger: GmailHbs
+2026-02-27 17:59:08.729 +01:00 [INF] GmailHbs trigger executed - checking emails
+2026-02-27 17:59:08.729 +01:00 [INF] Trigger completed: GmailHbs
+2026-02-27 17:59:08.729 +01:00 [INF] Executing trigger: RemindersHbs
+2026-02-27 17:59:08.729 +01:00 [INF] RemindersHbs trigger executed - checking upcoming reminders
+2026-02-27 17:59:08.729 +01:00 [INF] Trigger completed: RemindersHbs
+2026-02-27 17:59:42.680 +01:00 [INF] Starting PolaperBot API
+2026-02-27 17:59:42.732 +01:00 [INF] Reminders table initialized
+2026-02-27 17:59:42.744 +01:00 [INF] Heartbeat service started - Interval: 1min, Triggers: GmailHbs, RemindersHbs
+2026-02-27 17:59:42.780 +01:00 [INF] Now listening on: http://localhost:5057
+2026-02-27 17:59:42.780 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-27 17:59:42.780 +01:00 [INF] Hosting environment: Development
+2026-02-27 17:59:42.780 +01:00 [INF] Content root path: /home/polaper/Projects/PolaperBotV2/PolaperBot.Api
+2026-02-27 17:59:55.156 +01:00 [INF] Sessions table initialized
+2026-02-27 18:00:06.050 +01:00 [INF] Saved session for user 851002317 - Tokens: 7649+447=8096, Time: 4763ms
+2026-02-27 18:00:42.747 +01:00 [INF] Executing heartbeat triggers at "2026-02-27T18:00:42.7473566+01:00"
+2026-02-27 18:00:42.748 +01:00 [INF] Executing trigger: GmailHbs
+2026-02-27 18:00:42.748 +01:00 [INF] GmailHbs trigger executed - checking emails
+2026-02-27 18:00:42.748 +01:00 [INF] Trigger completed: GmailHbs
+2026-02-27 18:00:42.748 +01:00 [INF] Executing trigger: RemindersHbs
+2026-02-27 18:00:42.749 +01:00 [INF] RemindersHbs trigger executed - checking upcoming reminders
+2026-02-27 18:00:42.751 +01:00 [INF] Trigger completed: RemindersHbs
+2026-02-27 18:01:19.596 +01:00 [INF] Starting PolaperBot API
+2026-02-27 18:01:19.648 +01:00 [INF] Reminders table initialized
+2026-02-27 18:01:19.658 +01:00 [INF] Heartbeat service started - Interval: 1min, Triggers: GmailHbs, RemindersHbs
+2026-02-27 18:01:19.702 +01:00 [INF] Now listening on: http://localhost:5057
+2026-02-27 18:01:19.702 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-27 18:01:19.702 +01:00 [INF] Hosting environment: Development
+2026-02-27 18:01:19.702 +01:00 [INF] Content root path: /home/polaper/Projects/PolaperBotV2/PolaperBot.Api
+2026-02-27 18:01:32.791 +01:00 [INF] Starting PolaperBot API
+2026-02-27 18:01:32.839 +01:00 [INF] Reminders table initialized
+2026-02-27 18:01:32.849 +01:00 [INF] Heartbeat service started - Interval: 1min, Triggers: GmailHbs, RemindersHbs
+2026-02-27 18:01:32.884 +01:00 [INF] Now listening on: http://localhost:5057
+2026-02-27 18:01:32.884 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-27 18:01:32.885 +01:00 [INF] Hosting environment: Development
+2026-02-27 18:01:32.885 +01:00 [INF] Content root path: /home/polaper/Projects/PolaperBotV2/PolaperBot.Api
+2026-02-27 18:02:32.853 +01:00 [INF] Executing heartbeat triggers at "2026-02-27T18:02:32.8536627+01:00"
+2026-02-27 18:02:32.854 +01:00 [INF] Executing trigger: GmailHbs
+2026-02-27 18:02:32.854 +01:00 [INF] GmailHbs trigger executed - checking emails
+2026-02-27 18:02:32.854 +01:00 [INF] Trigger completed: GmailHbs
+2026-02-27 18:02:32.854 +01:00 [INF] Executing trigger: RemindersHbs
+2026-02-27 18:02:32.855 +01:00 [INF] RemindersHbs trigger executed - checking upcoming reminders
+2026-02-27 18:02:32.857 +01:00 [INF] Trigger completed: RemindersHbs
+2026-02-27 18:02:40.728 +01:00 [INF] Sessions table initialized
+2026-02-27 18:02:55.701 +01:00 [INF] Saved session for user 851002317 - Tokens: 16030+1576=17606, Time: 14865ms
+2026-02-27 18:03:32.852 +01:00 [INF] Executing heartbeat triggers at "2026-02-27T18:03:32.8525299+01:00"
+2026-02-27 18:03:32.852 +01:00 [INF] Executing trigger: GmailHbs
+2026-02-27 18:03:32.852 +01:00 [INF] GmailHbs trigger executed - checking emails
+2026-02-27 18:03:32.852 +01:00 [INF] Trigger completed: GmailHbs
+2026-02-27 18:03:32.852 +01:00 [INF] Executing trigger: RemindersHbs
+2026-02-27 18:03:32.853 +01:00 [INF] RemindersHbs trigger executed - checking upcoming reminders
+2026-02-27 18:03:32.853 +01:00 [INF] Trigger completed: RemindersHbs
+2026-02-27 18:04:26.873 +01:00 [INF] Saved session for user 851002317 - Tokens: 7712+802=8514, Time: 7033ms
+2026-02-27 18:04:32.852 +01:00 [INF] Executing heartbeat triggers at "2026-02-27T18:04:32.8519810+01:00"
+2026-02-27 18:04:32.852 +01:00 [INF] Executing trigger: GmailHbs
+2026-02-27 18:04:32.852 +01:00 [INF] GmailHbs trigger executed - checking emails
+2026-02-27 18:04:32.852 +01:00 [INF] Trigger completed: GmailHbs
+2026-02-27 18:04:32.852 +01:00 [INF] Executing trigger: RemindersHbs
+2026-02-27 18:04:32.852 +01:00 [INF] RemindersHbs trigger executed - checking upcoming reminders
+2026-02-27 18:04:32.852 +01:00 [INF] Trigger completed: RemindersHbs
+2026-02-27 18:04:46.820 +01:00 [INF] Saved session for user 851002317 - Tokens: 7680+517=8197, Time: 5513ms
+2026-02-27 18:05:34.346 +01:00 [INF] Executing heartbeat triggers at "2026-02-27T18:05:34.3438403+01:00"
+2026-02-27 18:05:34.881 +01:00 [INF] Executing trigger: GmailHbs
+2026-02-27 18:05:36.111 +01:00 [INF] GmailHbs trigger executed - checking emails
+2026-02-27 18:05:42.392 +01:00 [INF] Trigger completed: GmailHbs
+2026-02-27 18:05:42.392 +01:00 [INF] Executing trigger: RemindersHbs
+2026-02-27 18:05:42.393 +01:00 [INF] RemindersHbs trigger executed - checking upcoming reminders
+2026-02-27 18:05:42.394 +01:00 [INF] Trigger completed: RemindersHbs
+2026-02-27 18:05:46.370 +01:00 [INF] Saved session for user 851002317 - Tokens: 19391+1605=20996, Time: 39699ms
+2026-02-27 18:09:52.651 +01:00 [INF] Starting PolaperBot API
+2026-02-27 18:09:52.700 +01:00 [INF] Reminders table initialized
+2026-02-27 18:09:52.711 +01:00 [INF] Heartbeat service started - Interval: 1min, Triggers: GmailHbs, RemindersHbs
+2026-02-27 18:09:52.748 +01:00 [INF] Now listening on: http://localhost:5057
+2026-02-27 18:09:52.748 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-27 18:09:52.748 +01:00 [INF] Hosting environment: Development
+2026-02-27 18:09:52.748 +01:00 [INF] Content root path: /home/polaper/Projects/PolaperBotV2/PolaperBot.Api
+2026-02-27 18:10:03.891 +01:00 [INF] Sessions table initialized
+2026-02-27 18:10:32.054 +01:00 [INF] Created reminder 1: 'Recordatorio' for "2026-02-27T18:11:04.0000000" (ChatId: 851002317)
+2026-02-27 18:10:33.011 +01:00 [INF] Saved session for user 851002317 - Tokens: 7935+338=8273, Time: 29017ms
+2026-02-27 18:10:52.714 +01:00 [INF] Executing heartbeat triggers at "2026-02-27T18:10:52.7142601+01:00"
+2026-02-27 18:10:52.714 +01:00 [INF] Executing trigger: GmailHbs
+2026-02-27 18:10:52.715 +01:00 [INF] GmailHbs trigger executed - checking emails
+2026-02-27 18:10:52.715 +01:00 [INF] Trigger completed: GmailHbs
+2026-02-27 18:10:52.715 +01:00 [INF] Executing trigger: RemindersHbs
+2026-02-27 18:10:52.716 +01:00 [INF] RemindersHbs trigger executed - checking upcoming reminders
+2026-02-27 18:10:52.718 +01:00 [INF] Found 1 reminders to notify
+2026-02-27 18:11:00.384 +01:00 [INF] Message sent to chat 851002317
+2026-02-27 18:11:00.387 +01:00 [INF] Marked reminder 1 as notified
+2026-02-27 18:11:00.387 +01:00 [INF] Notified reminder 1 to chat 851002317
+2026-02-27 18:11:00.387 +01:00 [INF] Trigger completed: RemindersHbs

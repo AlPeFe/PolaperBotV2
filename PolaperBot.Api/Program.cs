@@ -71,6 +71,11 @@ if (app.Environment.IsDevelopment())
 
 app.MapChatEndpoints();
 
+if (!string.IsNullOrEmpty(telegramOptions.BotToken))
+{
+    app.MapTelegramEndpoints();
+}
+
 try
 {
     Log.Information("Starting PolaperBot API");

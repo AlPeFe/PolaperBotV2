@@ -1,5 +1,4 @@
 using System.Diagnostics;
-using System.Reflection;
 using Microsoft.Agents.AI;
 using PolaperBot.Core.AI.Sessions;
 
@@ -14,15 +13,19 @@ public class AgentService : IAgentService
 {
     private readonly AIAgent _agent;
     private readonly ISessionStore _sessionStore;
+    private readonly IUserContext _userContext;
 
-    public AgentService(AIAgent agent, ISessionStore sessionStore)
+    public AgentService(AIAgent agent, ISessionStore sessionStore, IUserContext userContext)
     {
         _agent = agent;
         _sessionStore = sessionStore;
+        _userContext = userContext;
     }
 
     public async Task<string> SendMessageAsync(long userId, string message, CancellationToken cancellationToken = default)
     {
+        _userContext.CurrentChatId = userId;
+        
         var session = await _sessionStore.LoadOrCreateAsync(userId, cancellationToken);
 
         var stopwatch = Stopwatch.StartNew();

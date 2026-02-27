@@ -2,16 +2,19 @@ using System.ComponentModel;
 using System.Text.Json;
 using Microsoft.Extensions.AI;
 using PolaperBot.Core.AI.Reminders;
+using PolaperBot.Core.AI.Services;
 
 namespace PolaperBot.Core.AI.Tools;
 
 public class ReminderTool
 {
     private readonly IReminderRepository _repository;
+    private readonly IUserContext _userContext;
 
-    public ReminderTool(IReminderRepository repository)
+    public ReminderTool(IReminderRepository repository, IUserContext userContext)
     {
         _repository = repository;
+        _userContext = userContext;
     }
 
     [Description("Crea un recordatorio. El agente te avisará por Telegram cuando llegue el momento. " +
@@ -19,8 +22,7 @@ public class ReminderTool
                  "Primero usa GetCurrentDateTime para obtener la fecha/hora actual y calcula la fecha objetivo.")]
     public async Task<string> CreateReminder(
         [Description("Descripción del recordatorio (qué debe recordar el agente)")] string description,
-        [Description("Fecha y hora ISO 8601 cuando debe avisar (ej: '2024-12-25T10:00:00')")] string scheduledFor,
-        [Description("ID del chat de Telegram donde enviar el aviso")] long telegramChatId)
+        [Description("Fecha y hora ISO 8601 cuando debe avisar (ej: '2024-12-25T10:00:00')")] string scheduledFor)
     {
         try
         {
@@ -34,12 +36,18 @@ public class ReminderTool
                 return JsonSerializer.Serialize(new { success = false, error = "La fecha debe ser en el futuro" });
             }
 
+            var chatId = _userContext.CurrentChatId;
+            if (chatId == 0)
+            {
+                return JsonSerializer.Serialize(new { success = false, error = "No hay chatId disponible" });
+            }
+
             var reminder = new Reminder
             {
                 Description = description,
                 ScheduledFor = scheduledDate,
                 CreatedAt = DateTime.UtcNow,
-                TelegramChatId = telegramChatId,
+                TelegramChatId = chatId,
                 IsNotified = false
             };
 

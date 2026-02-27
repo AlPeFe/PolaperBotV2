@@ -1,0 +1,16 @@
+/home/polaper/Projects/PolaperBotV2/PolaperBot.Infra/bin/Release/net10.0/PolaperBot.Infra.deps.json
+/home/polaper/Projects/PolaperBotV2/PolaperBot.Infra/bin/Release/net10.0/PolaperBot.Infra.dll
+/home/polaper/Projects/PolaperBotV2/PolaperBot.Infra/bin/Release/net10.0/PolaperBot.Infra.pdb
+/home/polaper/Projects/PolaperBotV2/PolaperBot.Infra/bin/Release/net10.0/PolaperBot.Core.AI.dll
+/home/polaper/Projects/PolaperBotV2/PolaperBot.Infra/bin/Release/net10.0/PolaperBot.Core.AI.pdb
+/home/polaper/Projects/PolaperBotV2/PolaperBot.Infra/obj/Release/net10.0/PolaperBot.Infra.csproj.AssemblyReference.cache
+/home/polaper/Projects/PolaperBotV2/PolaperBot.Infra/obj/Release/net10.0/PolaperBot.Infra.GeneratedMSBuildEditorConfig.editorconfig
+/home/polaper/Projects/PolaperBotV2/PolaperBot.Infra/obj/Release/net10.0/PolaperBot.Infra.AssemblyInfoInputs.cache
+/home/polaper/Projects/PolaperBotV2/PolaperBot.Infra/obj/Release/net10.0/PolaperBot.Infra.AssemblyInfo.cs
+/home/polaper/Projects/PolaperBotV2/PolaperBot.Infra/obj/Release/net10.0/PolaperBot.Infra.csproj.CoreCompileInputs.cache
+/home/polaper/Projects/PolaperBotV2/PolaperBot.Infra/obj/Release/net10.0/PolaperBot.Infra.sourcelink.json
+/home/polaper/Projects/PolaperBotV2/PolaperBot.Infra/obj/Release/net10.0/PolaperB.7D20CBD3.Up2Date
+/home/polaper/Projects/PolaperBotV2/PolaperBot.Infra/obj/Release/net10.0/PolaperBot.Infra.dll
+/home/polaper/Projects/PolaperBotV2/PolaperBot.Infra/obj/Release/net10.0/refint/PolaperBot.Infra.dll
+/home/polaper/Projects/PolaperBotV2/PolaperBot.Infra/obj/Release/net10.0/PolaperBot.Infra.pdb
+/home/polaper/Projects/PolaperBotV2/PolaperBot.Infra/obj/Release/net10.0/ref/PolaperBot.Infra.dll

@@ -1,0 +1,13 @@
+/home/polaper/Projects/PolaperBotV2/PolaperBot.Core.AI/bin/Release/net10.0/PolaperBot.Core.AI.deps.json
+/home/polaper/Projects/PolaperBotV2/PolaperBot.Core.AI/bin/Release/net10.0/PolaperBot.Core.AI.dll
+/home/polaper/Projects/PolaperBotV2/PolaperBot.Core.AI/bin/Release/net10.0/PolaperBot.Core.AI.pdb
+/home/polaper/Projects/PolaperBotV2/PolaperBot.Core.AI/obj/Release/net10.0/PolaperBot.Core.AI.csproj.AssemblyReference.cache
+/home/polaper/Projects/PolaperBotV2/PolaperBot.Core.AI/obj/Release/net10.0/PolaperBot.Core.AI.GeneratedMSBuildEditorConfig.editorconfig
+/home/polaper/Projects/PolaperBotV2/PolaperBot.Core.AI/obj/Release/net10.0/PolaperBot.Core.AI.AssemblyInfoInputs.cache
+/home/polaper/Projects/PolaperBotV2/PolaperBot.Core.AI/obj/Release/net10.0/PolaperBot.Core.AI.AssemblyInfo.cs
+/home/polaper/Projects/PolaperBotV2/PolaperBot.Core.AI/obj/Release/net10.0/PolaperBot.Core.AI.csproj.CoreCompileInputs.cache
+/home/polaper/Projects/PolaperBotV2/PolaperBot.Core.AI/obj/Release/net10.0/PolaperBot.Core.AI.sourcelink.json
+/home/polaper/Projects/PolaperBotV2/PolaperBot.Core.AI/obj/Release/net10.0/PolaperBot.Core.AI.dll
+/home/polaper/Projects/PolaperBotV2/PolaperBot.Core.AI/obj/Release/net10.0/refint/PolaperBot.Core.AI.dll
+/home/polaper/Projects/PolaperBotV2/PolaperBot.Core.AI/obj/Release/net10.0/PolaperBot.Core.AI.pdb
+/home/polaper/Projects/PolaperBotV2/PolaperBot.Core.AI/obj/Release/net10.0/ref/PolaperBot.Core.AI.dll

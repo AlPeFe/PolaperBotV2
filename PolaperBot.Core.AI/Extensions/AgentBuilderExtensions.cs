@@ -17,6 +17,7 @@ public static class AgentBuilderExtensions
         configure?.Invoke(ollamaOptions);
 
         services.AddSingleton(ollamaOptions);
+        services.AddSingleton<IUserContext, UserContext>();
 
         services.AddSingleton<AIAgent>(sp =>
         {
