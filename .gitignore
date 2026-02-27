@@ -1,0 +1,14 @@
+# Ignore appsettings files (environment-specific and may contain secrets)
+# Match appsettings.json and any appsettings.*.json in the repo
+appsettings.json
+appsettings.*.json
+**/appsettings.json
+**/appsettings.*.json
+
+# Common .NET ignores
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
